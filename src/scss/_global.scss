@@ -8,6 +8,7 @@ body {
     font-weight: 400;
     font-size: 14px;
     color: $mainBlack;
+    background-color: #F8F6F4;
 }
 
 a {
@@ -15,4 +16,14 @@ a {
     &:hover {
         text-decoration: none;
     }
+}
+
+h1 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 78px;
+    letter-spacing: 0.02em;
+    color: #515257;
 }
