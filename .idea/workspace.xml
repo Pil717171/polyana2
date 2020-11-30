@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="76d95675-66e0-4cad-a0db-e4e22b36c356" name="Default Changelist" comment="" />
+    <list default="true" id="76d95675-66e0-4cad-a0db-e4e22b36c356" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pug/parts/delivery.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pug/parts/dishes-block.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/_delivery.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/mixins.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/mixins.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/parts/dishes.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/dishes.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_dishes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_dishes.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +44,10 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
   <component name="ProjectId" id="1kmtmZnpr7TXuo160dOFBdFSJnt" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -22,7 +56,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tradingapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../building_landing" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -38,28 +72,47 @@
       <workItem from="1606317754518" duration="2239000" />
       <workItem from="1606377083394" duration="5354000" />
       <workItem from="1606464851277" duration="8889000" />
+      <workItem from="1606672630841" duration="602000" />
+      <workItem from="1606721477606" duration="25508000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606317907193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606317907193" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1606464858281">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2660" y="274" key="FileChooserDialogImpl" timestamp="1606743213121">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606464858281" />
+    <state x="2660" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606743213121" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1606484488553">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606484488553" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1606484131591">
+    <state x="777" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606721547724">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="777" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606721547724" />
+    <state x="2536" y="240" key="run.anything.popup" timestamp="1606733207221">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606484131591" />
+    <state x="2536" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606733207221" />
   </component>
 </project>

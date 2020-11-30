@@ -1,25 +1,185 @@
-mixin roundLink (text, link) 
-    a(href=link)
-        .round
-            .round-block
-            .round-text=text
+mixin burgerBlock (dish, types)
+    .dishes-block
+        .row
+            .col
+                .dishes-title
+                    h3=dish
+                    each val in types
+                        .dishes-title-type
+                            .dishes-title-img
+                                img(src=val.url alt=val.name)
+                            .dishes-title-text=val.name
+        .row
+            .col-12.col-md-4.col-xl-3
+                +dishCard('270 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '7,39 p.', [ './../images/dishes/spice.svg'])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('222 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '7,39 p.', ['./../images/dishes/veg.svg', './../images/dishes/spice.svg'])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('345 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '8,99 p.', [])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('250 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '7,39 p.', ['./../images/dishes/spice.svg'])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('312 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '6,00 p.', [])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('370 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы', '11,39 p.', ['./../images/dishes/veg.svg', './../images/dishes/spice.svg'])
 
-mixin commentBlock (url, name, job, comment, full)
-    .row.testimonials-block
-            .offset-1.col-11.offset-lg-2.col-lg-4
-                .testimonials-info
-                    .testimonials-info-avatar
-                        img(src=url, alt=name)
-                    .testimonials-info-text
-                        .testimonials-info-text-name.text   
-                            span=name
-                        .testimonials-info-text-job.text
-                            span=job
-            .col-12.col-lg-5 
-                .testimonials-text
-                    .testimonials-text-quot 
-                        img(src="./images/quote.svg", alt="quote")
-                    .testimonials-text-big
-                        .testimonials-text-comment=comment
-                        .testimonials-text-full=full
+mixin sandwichBlock (dish, types)
+    .dishes-block
+        .row
+            .col
+                .dishes-title
+                    h3=dish
+                    each val in types
+                        .dishes-title-type
+                            .dishes-title-img
+                                img(src=val.url alt=val.name)
+                            .dishes-title-text=val.name
+        .row
+            .col-12.col-md-4.col-xl-3
+                +dishCard('270 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '7,39 p.', [ './../images/dishes/spice.svg'])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('222 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '7,39 p.', ['./../images/dishes/veg.svg', './../images/dishes/spice.svg'])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('345 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '8,99 p.', [])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('250 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '7,39 p.', ['./../images/dishes/spice.svg'])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('312 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '6,00 p.', [])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('370 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы', '11,39 p.', ['./../images/dishes/veg.svg', './../images/dishes/spice.svg'])
+
+mixin snacksBlock (dish, types)
+    .dishes-block
+        .row
+            .col
+                .dishes-title
+                    h3=dish
+                    each val in types
+                        .dishes-title-type
+                            .dishes-title-img
+                                img(src=val.url alt=val.name)
+                            .dishes-title-text=val.name
+        .row
+            .col-12.col-md-4.col-xl-3
+                +dishCard('270 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '7,39 p.', [ './../images/dishes/spice.svg'])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('222 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '7,39 p.', ['./../images/dishes/veg.svg', './../images/dishes/spice.svg'])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('345 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '8,99 p.', [])
+
+mixin sauseBlock (dish, types)
+    .dishes-block
+        .row
+            .col
+                .dishes-title
+                    h3=dish
+                    each val in types
+                        .dishes-title-type
+                            .dishes-title-img
+                                img(src=val.url alt=val.name)
+                            .dishes-title-text=val.name
+        .row
+            .col-12.col-md-4.col-xl-3
+                +dishCard('270 гр', './../images/dishes/sause_1.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '7,39 p.', [])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('222 гр', './../images/dishes/sause_2.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '7,39 p.', [])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('345 гр', './../images/dishes/sause_3.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '8,99 p.', [])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('345 гр', './../images/dishes/sause_4.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '8,99 p.', [])
+
+mixin sweetsBlock (dish, types)
+    .dishes-block
+        .row
+            .col
+                .dishes-title
+                    h3=dish
+                    each val in types
+                        .dishes-title-type
+                            .dishes-title-img
+                                img(src=val.url alt=val.name)
+                            .dishes-title-text=val.name
+        .row
+            .col-12.col-md-4.col-xl-3
+                +dishCard('270 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '7,39 p.', [])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('222 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '7,39 p.', [])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('345 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '8,99 p.', [])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('345 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '8,99 p.', [])
+
+mixin drinksBlock (dish, types)
+    .dishes-block
+        .row
+            .col
+                .dishes-title
+                    h3=dish
+                    each val in types
+                        .dishes-title-type
+                            .dishes-title-img
+                                img(src=val.url alt=val.name)
+                            .dishes-title-text=val.name
+        .row
+            .col-12.col-md-4.col-xl-3
+                +dishCard('270 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '7,39 p.', [])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('222 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '7,39 p.', [])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('345 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '8,99 p.', [])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('345 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '8,99 p.', [])
+
+
+mixin breakfastBlock (dish, types)
+    .dishes-block
+        .row
+            .col
+                .dishes-title
+                    h3=dish
+                    each val in types
+                        .dishes-title-type
+                            .dishes-title-img
+                                img(src=val.url alt=val.name)
+                            .dishes-title-text=val.name
+        .row
+            .col-12.col-md-4.col-xl-3
+                +dishCard('270 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '7,39 p.', [])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('222 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '7,39 p.', [])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('345 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '8,99 p.', [])
+            .col-12.col-md-4.col-xl-3
+                +dishCard('345 гр', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '8,99 p.', [])
+
+
+
+mixin dishCard (weight, srcImg, title, desc, price, typeArray)
+    .dishes-card
+        .dishes-card-top
+            .dishes-card-weight
+                p=weight
+            .dishes-card-type
+                each type in typeArray
+                  img(src=type)
+        .dishes-card-img
+            img(src=srcImg alt=title)
+        .dishes-card-text
+            .dishes-card-title
+                h4=title
+            .dishes-card-desc
+                p=desc
+        .dishes-card-price
+            .dishes-card-price-left
+                h4=price
+            .dishes-card-price-right
+                .dishes-card-counter
+                    .dishes-card-counter-minus
+                        span -
+                    .dishes-card-counter-count
+                        span 1
+                    .dishes-card-counter-plus
+                        span +
+        .dishes-card-button В корзину
+
 

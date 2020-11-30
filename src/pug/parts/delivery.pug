@@ -1,0 +1,22 @@
+.delivery
+    .container
+        .row
+            .col
+                h2 Зона доставки
+    .delivery-map
+        #map
+        .container
+            .row
+                .col
+                    .delivery-form
+                        .delivery-form-text
+                            h4 Проверить адрес доставки
+                            p Мы придерживаемся проверенной системы стандартов работы, поэтому районы нашей доставки ограничены
+                        form
+                            .input-group
+                                input#inputField.input-area(type='text' required='')
+                                label.label(for='inputField') Улица
+                            .input-group
+                                input#inputField.input-area(type='text' required='')
+                                label.label(for='inputField') Номер дома
+                            button(type='submit' disabled='true') Проверить
