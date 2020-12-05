@@ -1,0 +1,27 @@
+include ./../mixins
+.cart
+    .cart-wrapper
+        .cart-top
+            .cart-title
+                h3 Корзина (3)
+            .cart-clear
+
+        .cart-content
+            +cartItem(1, './../images/dishes/burger.png', 'hhhhh', 1, 123)
+            +cartItem(1, './../images/dishes/burger.png', 'hhhhh', 1, 123)
+        .cart-tips
+            .cart-tips-drink
+                p Выберите напиток
+                img(src="./../images/cart/drink.png" alt="drink")
+            .cart-tips-sause
+                p Выберите соус
+                img(src="./../images/cart/sause.png" alt="sause")
+        .cart-total
+            .cat-total-text
+                h3 Сумма заказа
+            .cat-total-price
+                h3 16,99 p.
+        .cart-button
+            p Оформить заказ
+    .cart-close
+        img(src="./../images/cart/cart-close.svg")

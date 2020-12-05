@@ -7,16 +7,16 @@
         #map
         .container
             .row
-                .col
+                .col-4
                     .delivery-form
                         .delivery-form-text
                             h4 Проверить адрес доставки
                             p Мы придерживаемся проверенной системы стандартов работы, поэтому районы нашей доставки ограничены
                         form
                             .input-group
-                                input#inputField.input-area(type='text' required='')
-                                label.label(for='inputField') Улица
+                                input#street.input-area(type='text' required='true')
+                                label.label(for='street') Улица
                             .input-group
-                                input#inputField.input-area(type='text' required='')
-                                label.label(for='inputField') Номер дома
+                                input#house.input-area(type='text' required='true')
+                                label.label(for='house') Номер дома
                             button(type='submit' disabled='true') Проверить

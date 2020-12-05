@@ -2,7 +2,7 @@
   &-top {
     height: 85px;
     position: relative;
-    z-index: 2;
+    z-index: 4;
     &-block {
       display: flex;
       flex-direction: row;
@@ -109,11 +109,12 @@
     display: flex;
     flex-direction: row;
     padding-top: 13px;
+
     &-item {
       display: flex;
       align-items: center;
       margin-right: 30px;
-      a {
+      a, span {
         display: flex;
         align-items: center;
         font-style: normal;
@@ -122,6 +123,7 @@
         line-height: 20px;
         color: $mainBlack;
         transition: 0.3s;
+        cursor: pointer;
         &:hover {
           color: $activeColor;
         }
@@ -140,5 +142,110 @@
     display: flex;
     justify-content: center;
     position: relative;
+  }
+  &-fixed {
+    height: 85px;
+    width: 100%;
+    background: #F8F6F4;
+    box-shadow: 0px 16px 24px rgba(52, 51, 49, 0.06), 0px 2px 6px rgba(52, 51, 49, 0.04), 0px 0px 1px rgba(52, 51, 49, 0.04);
+    border-radius: 2px;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    transition: 0.3s ease-in-out;
+    transform: translateY(-100%);
+    &.open {
+      transform: translateY(0);
+    }
+    a {
+      font-family: 'Lato', Arial, Helvetica, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: #515257;
+      transition: 0.3s;
+      &:hover {
+        color: #5AACB8;
+      }
+    }
+    .container {
+      height: 100%;
+    }
+    .row {
+      height: 100%;
+    }
+    .col {
+      height: 100%;
+    }
+    &-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 100%;
+    }
+    &-left {
+      display: flex;
+    }
+    &-logo {
+      position: relative;
+      width: 160px;
+      height: 100%;
+      background: #515257;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &-right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    &-menu {
+      margin-left: 40px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+      &-item {
+        margin-right: 20px;
+        &.active {
+          color: #5AACB8;
+        }
+      }
+    }
+    &-phone {
+      display: flex;
+      margin-right: 20px;
+      img {
+        display: inline;
+        margin-right: 7px;
+      }
+    }
+    &-cart {
+      &-button {
+        width: 180px;
+        height: 45px;
+        background: #5AACB8;
+        border-radius: 2px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        img {
+          margin-right: 7px;
+        }
+        & > span {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 20px;
+          color: #FFFFFF;
+        }
+      }
+    }
   }
 }

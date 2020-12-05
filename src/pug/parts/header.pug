@@ -45,12 +45,19 @@ section.header
                                 .header-top-block-item-right-bot-right
                                     .header-menu
                                         .header-menu-item.right
-                                            a(href='#')
-                                                span
-                                                    img(src='./../images/header/login.svg' alt='login')
-                                                span Войти
-                                        .header-menu-button
+                                            span
+                                                img(src='./../images/header/login.svg' alt='login')
+                                            span Войти
+                                        .header-fixed-cart
+                                            .header-fixed-cart-button
+                                                img(src="./../images/header/cart.svg" alt="cart")
+                                                span Корзина: &nbsp;
+                                                span.header-fixed-cart-total 0
+                                                include ./cart.pug
+
     .header-slider
         include ./slider.pug
     .header-bottom
         include ./menu.pug
+    .header-fixed
+        include ./header-fixed.pug

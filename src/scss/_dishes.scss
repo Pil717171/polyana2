@@ -94,7 +94,7 @@
                 margin-bottom: 10px;
             }
             p {
-                font-family: Lato;
+                font-family: 'Lato', Arial, Helvetica, sans-serif;
                 font-style: normal;
                 font-weight: normal;
                 font-size: 14px;
@@ -133,6 +133,14 @@
             border: 1px solid #E5E5E5;
             box-sizing: border-box;
             border-radius: 2px;
+            span {
+                font-family: 'Lato', Arial, Helvetica, sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                color: #515257;
+            }
             &-plus {
                 border-left: 1px solid #E5E5E5;
                 width: 33%;

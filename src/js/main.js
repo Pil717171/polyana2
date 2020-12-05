@@ -114,7 +114,82 @@
     });
   }
 
+  function fixedMenu () {
+    let menu = document.querySelector('.menu')
+    let fixedMenu = document.querySelector('.header-fixed')
+    let menuHeight = menu.clientHeight
+    let menuPosition = menu.getBoundingClientRect().top + pageYOffset + menuHeight
+    let isMenuOpen = false
+    if(menu) {
+      window.addEventListener('scroll', (e) => {
+        if((pageYOffset >= menuPosition) && !isMenuOpen) {
+          fixedMenu.classList.add('open')
+          isMenuOpen = true
+        } else if ((pageYOffset < menuPosition) && isMenuOpen){
+          isMenuOpen = false
+          fixedMenu.classList.remove('open')
+        }
+      })
+    }
+  }
+
+  function cartVisible () {
+    let openButtons = Array.prototype.slice.call(document.querySelectorAll('.header-fixed-cart'))
+    let cart = document.querySelector('.cart')
+    let cartCloseButton = document.querySelector('.cart-close')
+    openButtons.forEach((button) => {
+      button.addEventListener('click', (e) => {
+        e.stopPropagation()
+        cart.classList.toggle('visible')
+      })
+    })
+    cartCloseButton.addEventListener('click', (e) => {
+      e.stopPropagation()
+      cart.classList.remove('visible')
+    })
+  }
+
+  function cart () {
+
+  }
+
+
+  function setProduct () {
+    let productsArray = Array.prototype.slice.call(document.querySelectorAll('.dishes-card'))
+    productsArray.forEach((product) => {
+      let cartButton = product.querySelector('.dishes-card-button')
+      cartButton.addEventListener('click', (e) => {
+        addToCart(product)
+      })
+    })
+
+
+  }
+
+  function addToCart (product) {
+    let cart = []
+    if(localStorage.getItem('cart') !== null) {
+      cart = JSON.parse(localStorage.getItem('cart'))
+    } else {
+      localStorage.setItem('cart', JSON.stringify(cart))
+      cart = JSON.parse(localStorage.getItem('cart'))
+    }
+    let productData = {
+      id: product.dataset.id,
+      src: product.dataset.src,
+      title: product.dataset.title,
+      price: product.dataset.price,
+      count: 1
+    }
+
+    cart.push(productData)
+    localStorage.setItem('cart', JSON.stringify(cart))
+  }
+
+  fixedMenu()
   initMap()
+  setProduct()
+  cartVisible()
 
 
 
