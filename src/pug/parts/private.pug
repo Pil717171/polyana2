@@ -1,0 +1,59 @@
+.private
+    .container
+        .row
+            .col-8.offset-2
+                .private-title
+                    h2 Личный кабинет
+                .private-block
+                    .private-block-title
+                        h3 Личные данные
+                    .private-block-static.active
+                        .private-block-static-item
+                            .private-block-static-title
+                                p Имя
+                            .private-block-static-prop
+                                p Константин
+                        .private-block-static-item
+                            .private-block-static-title
+                                p Номер телефона
+                            .private-block-static-prop
+                                p +375 (29) 123-78-23
+                        .private-block-static-item
+                            .private-block-static-title
+                                p Электронная почта
+                            .private-block-static-prop
+                                p tim.jennings@example.com
+                        .private-block-change
+                            span Изменить
+                    .private-block-dynamic
+                        form(name="private-change")
+                            .input-group
+                                input#private-name.input-area(type='text' required='true')
+                                label.label(for='private-name') Имя
+                            .input-group
+                                input#private-phone.input-area(type='text' required='true')
+                                label.label(for='private-phone') Номер телефона
+                            .input-group
+                                input#private-email.input-area(type='text' required='true')
+                                label.label(for='private-email') Электронная почта
+                            .button
+                                button.my-button(type="submit") Сохранить изменения
+                .private-block
+                    .private-block-title
+                        h3 Адрес доставки
+                    .private-block-static.active
+                        .private-block-address.my-button
+
+                    .private-block-dynamic
+                        form(name="private-change")
+                            .input-group
+                                input#private-name.input-area(type='text' required='true')
+                                label.label(for='private-name') Имя
+                            .input-group
+                                input#private-phone.input-area(type='text' required='true')
+                                label.label(for='private-phone') Номер телефона
+                            .input-group
+                                input#private-email.input-area(type='text' required='true')
+                                label.label(for='private-email') Электронная почта
+                            .button
+                                button.my-button(type="submit") Сохранить изменения

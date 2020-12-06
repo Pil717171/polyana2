@@ -1,4 +1,5 @@
-
+  // slider
+  function initSlider () {
   var mySwiper = new Swiper('.swiper-container', {
     cssMode: true,
     navigation: {
@@ -12,7 +13,8 @@
     mousewheel: true,
     keyboard: true,
   })
-
+}
+  // map
   function initMap () {
     mapboxgl.accessToken = 'pk.eyJ1IjoicGlsNzE3MTcxIiwiYSI6ImNrMHl6ZHRzZDA5NjIzbnBlbXFjNG1ieDAifQ.PlTvgO1WM00hT6-OMxJsWA';
     var map = new mapboxgl.Map({
@@ -113,7 +115,7 @@
       });
     });
   }
-
+  // menu
   function fixedMenu () {
     let menu = document.querySelector('.menu')
     let fixedMenu = document.querySelector('.header-fixed')
@@ -132,14 +134,16 @@
       })
     }
   }
-
+  //cart
   function cartVisible () {
     let openButtons = Array.prototype.slice.call(document.querySelectorAll('.header-fixed-cart'))
     let cart = document.querySelector('.cart')
+    let authBlock = document.querySelector('.auth')
     let cartCloseButton = document.querySelector('.cart-close')
     openButtons.forEach((button) => {
       button.addEventListener('click', (e) => {
         e.stopPropagation()
+        authBlock.classList.remove('visible')
         cart.classList.toggle('visible')
       })
     })
@@ -148,12 +152,6 @@
       cart.classList.remove('visible')
     })
   }
-
-  function cart () {
-
-  }
-
-
   function setProduct () {
     let productsArray = Array.prototype.slice.call(document.querySelectorAll('.dishes-card'))
     productsArray.forEach((product) => {
@@ -165,7 +163,6 @@
 
 
   }
-
   function addToCart (product) {
     let cart = []
     if(localStorage.getItem('cart') !== null) {
@@ -185,11 +182,108 @@
     cart.push(productData)
     localStorage.setItem('cart', JSON.stringify(cart))
   }
+  // Phone mask
+  function addMask (selector) {
+  console.log(selector)
+  $(selector).mask("+375 (99) 999-99-99")
+}
+  // auth block
+  function authVisible () {
+    let openButton = document.querySelector('.header-menu-sign')
+    let authBlock = document.querySelector('.auth')
+    let cartBlock = document.querySelector('.cart')
+    let closeButton = document.querySelector('.auth-close')
+    openButton.addEventListener('click', (e) => {
+      e.stopPropagation()
+      cartBlock.classList.remove('visible')
+      authBlock.classList.toggle('visible')
+    })
+    closeButton.addEventListener('click', (e) => {
+      e.stopPropagation()
+      authBlock.classList.remove('visible')
+    })
+  }
 
-  fixedMenu()
-  initMap()
-  setProduct()
-  cartVisible()
+  function loginRegistrationChanging () {
+    let loginBlock = document.querySelector('.login')
+    let regBlock = document.querySelector('.reg')
+    let loginTrigger = document.querySelector('.reg-cancel')
+    let regTrigger = document.querySelector('.login-registration')
+    let nextStepButton = document.querySelector('.reg-next')
+    let prevStepButton = document.querySelector('.reg-back')
+    let firstStepBlock = document.querySelector('.reg-first')
+    let secondStepBlock = document.querySelector('.reg-second')
+
+    loginTrigger.addEventListener('click', (e) => {
+      e.stopPropagation()
+      loginBlock.classList.add('active')
+      regBlock.classList.remove('active')
+
+    })
+    regTrigger.addEventListener('click', (e) => {
+      e.stopPropagation()
+      loginBlock.classList.remove('active')
+      regBlock.classList.add('active')
+      firstStepBlock.classList.add('active')
+    })
+    nextStepButton.addEventListener('click', (e) => {
+      e.stopPropagation()
+      firstStepBlock.classList.remove('active')
+      secondStepBlock.classList.add('active')
+    })
+    prevStepButton.addEventListener('click', (e) => {
+      e.stopPropagation()
+      firstStepBlock.classList.add('active')
+      secondStepBlock.classList.remove('active')
+    })
+
+  }
+
+  // changed Header (different size main and other pages)
+  function changeHeaderSize () {
+    let headerTop = document.querySelector('.header-top')
+    headerTop.classList.add('changed')
+  }
+
+  function changePrivateData () {
+    let changeButton = document.querySelector('.private-block-change')
+    let staticBlock = document.querySelector('.private-block-static')
+    let dynamicBlock = document.querySelector('.private-block-dynamic')
+    let submitButton = dynamicBlock.querySelector('button')
+    changeButton.addEventListener('click', (e) => {
+      e.stopPropagation()
+      staticBlock.classList.remove('active')
+      dynamicBlock.classList.add('active')
+    })
+    submitButton.addEventListener('click', (e) => {
+      e.preventDefault()
+      staticBlock.classList.add('active')
+      dynamicBlock.classList.remove('active')
+    })
+  }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  let privatePage = document.querySelector('.private')
+  if(privatePage) {
+    changeHeaderSize()
+    cartVisible();
+    addMask("#private-phone")
+    changePrivateData()
+  } else {
+    initSlider()
+    fixedMenu()
+    initMap()
+    setProduct()
+    cartVisible();
+    addMask("#phone-reg")
+    authVisible()
+    loginRegistrationChanging()
+  }
+
+
+})
+
 
 
 

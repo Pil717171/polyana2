@@ -1,0 +1,69 @@
+.private {
+  padding-top: 100px;
+  padding-bottom: 263px;
+  background: url('./../images/dishes/bg.png');
+  background-repeat: repeat;
+  &-title {
+    h2 {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 59px;
+      text-align: center;
+    }
+    margin-bottom: 60px;
+  }
+  &-block {
+    padding: 30px 60px;
+    background: #F8F6F4;
+    border: 1px solid rgba(243, 243, 243, 0.2);
+    box-sizing: border-box;
+    box-shadow: 0px 10px 20px rgba(52, 51, 49, 0.04), 0px 2px 6px rgba(52, 51, 49, 0.04), 0px 0px 1px rgba(52, 51, 49, 0.04);
+    border-radius: 3px;
+    margin-bottom: 40px;
+    &-title {
+      margin-bottom: 30px;
+    }
+    &-static {
+      display: none;
+      &.active {
+        display: block;
+      }
+      &-item {
+        display: flex;
+        margin-bottom: 20px;
+      }
+      &-title {
+        font-weight: 600;
+        width: 170px;
+        font-size: 16px;
+        margin-right: 55px;
+      }
+      &-prop {
+        font-family: 'Lato', Arial, Helvetica, sans-serif;
+      }
+    }
+    &-change {
+      span {
+        font-weight: 600;
+        color: $activeColor;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          color: $activeColor;
+        }
+      }
+    }
+    &-dynamic {
+      display: none;
+      &.active {
+        display: block;
+      }
+      & .input-group {
+        width: 300px;
+      }
+    }
+  }
+}

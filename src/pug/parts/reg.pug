@@ -1,0 +1,27 @@
+.reg
+    form(name='registration')
+        .reg-first.active
+            .input-group
+                input#street-reg.input-area(type='text' required='true')
+                label.label(for='street-reg') Улица
+            .input-group
+                input#phone-reg.input-area(type='text' required='true')
+                label.label(for='phone-reg') Номер телефона
+            .input-group
+                input#email-reg.input-area(type='text' required='true')
+                label.label(for='email-reg') Электронная почта
+            .reg-buttons
+                .reg-cancel
+                    span Отмена
+                button.reg-next Продолжить
+        .reg-second
+            .input-group
+                input#password-reg.input-area(type='password' required='true')
+                label.label(for='password-reg') Пароль
+            .input-group
+                input#subm-reg.input-area(type='password' required='true')
+                label.label(for='subm-reg') Повторите пароль
+            .reg-buttons
+                .reg-back
+                    span Назад
+                button(type='submit') Продолжить

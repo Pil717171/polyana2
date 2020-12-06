@@ -3,6 +3,20 @@
     height: 85px;
     position: relative;
     z-index: 4;
+    &.changed {
+      height: auto;
+      .header-top-logo {
+        width: 164px;
+        height: 100%;
+        img {
+          height: 50%;
+        }
+      }
+      .header-top-block-right-bot {
+        background: url('./../images/dishes/bg.png');
+        background-repeat: repeat;
+      }
+    }
     &-block {
       display: flex;
       flex-direction: row;
@@ -135,6 +149,7 @@
       }
       &.right {
         margin-right: 20px;
+        position: relative;
       }
     }
   }
