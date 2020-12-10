@@ -25,26 +25,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76d95675-66e0-4cad-a0db-e4e22b36c356" name="Default Changelist" comment="added map, dishes block">
-      <change afterPath="$PROJECT_DIR$/src/js/private.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pug/parts/auth.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pug/parts/header-top.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pug/parts/private.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pug/parts/reg.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pug/private.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/_auth.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/_private.scss" afterDir="false" />
+    <list default="true" id="76d95675-66e0-4cad-a0db-e4e22b36c356" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/parts/header.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/header.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/parts/login.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/login.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_delivery.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_delivery.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/parts/private.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/private.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/cart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_cart.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_private.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_private.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +56,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tradingapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -95,7 +80,10 @@
       <workItem from="1606813279760" duration="800000" />
       <workItem from="1606984523852" duration="18609000" />
       <workItem from="1607169619267" duration="12535000" />
-      <workItem from="1607258397687" duration="12509000" />
+      <workItem from="1607258397687" duration="12598000" />
+      <workItem from="1607326702023" duration="2675000" />
+      <workItem from="1607423342486" duration="2859000" />
+      <workItem from="1607435764816" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="added map, dishes block">
       <created>1606750815815</created>
@@ -111,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607186907134</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added new page">
+      <created>1607270969073</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607270969073</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,22 +138,23 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added map, dishes block" />
-    <option name="LAST_COMMIT_MESSAGE" value="added map, dishes block" />
+    <MESSAGE value="added new page" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607266268066">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607266268066" />
-    <state x="585" y="4" key="CommitChangelistDialog2" timestamp="1607186945423">
+    <state x="585" y="4" key="CommitChangelistDialog2" timestamp="1607270968539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="4" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607186945423" />
+    <state x="585" y="4" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607270968539" />
     <state x="2505" y="88" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606750815427" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1607187026035">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1607353906362">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607187026035" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607353906362" />
     <state x="2660" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606743213121" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1606484488553">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -168,10 +164,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607005173741" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1607187315106">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1607270978364">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607187315106" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607270978364" />
     <state x="2472" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606750821709" />
     <state x="777" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606721547724">
       <screen x="0" y="0" width="1920" height="1040" />

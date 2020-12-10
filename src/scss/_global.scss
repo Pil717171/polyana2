@@ -61,6 +61,12 @@ h4 {
     line-height: 17px;
     color: #ffffff;
     padding: 14px 18px;
+    width: fit-content;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+        background: $activeColor;
+    }
 }
 
 .input-group {

@@ -41,10 +41,11 @@
                 .private-block
                     .private-block-title
                         h3 Адрес доставки
-                    .private-block-static.active
+                    .private-block-static.adrress.active
                         .private-block-address.my-button
-
-                    .private-block-dynamic
+                            img(src='./../images/private/add.svg' alt='add')
+                            span Добавить адрес
+                    .private-block-dynamic.adress
                         form(name="private-change")
                             .input-group
                                 input#private-name.input-area(type='text' required='true')
