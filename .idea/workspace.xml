@@ -27,9 +27,9 @@
   <component name="ChangeListManager">
     <list default="true" id="76d95675-66e0-4cad-a0db-e4e22b36c356" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/parts/header-top.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/header-top.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pug/parts/private.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/private.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_private.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_private.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_header.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +84,7 @@
       <workItem from="1607326702023" duration="2675000" />
       <workItem from="1607423342486" duration="2859000" />
       <workItem from="1607435764816" duration="4000" />
+      <workItem from="1607686667748" duration="6749000" />
     </task>
     <task id="LOCAL-00001" summary="added map, dishes block">
       <created>1606750815815</created>

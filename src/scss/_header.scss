@@ -12,6 +12,9 @@
           height: 50%;
         }
       }
+      .header-top-block-left {
+        height: 147px;
+      }
       .header-top-block-right-bot {
         background: url('./../images/dishes/bg.png');
         background-repeat: repeat;
@@ -21,7 +24,11 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      position: relative;
       &-left {
+        position: absolute;
+        top: 0;
+        left: 0;
 
       }
       &-right {
@@ -35,15 +42,26 @@
           padding-top: 30px;
           height: 85px;
           width: 100%;
+          &-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-left: 260px;
+          }
         }
         &-bot {
-          padding-top: 20px;
-          padding-left: 40px;
+          //padding-top: 20px;
           display: flex;
           flex-direction: row;
           justify-content: space-between;
+          &-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 260px;
+          }
           &-left {
-
+            margin-left: 40px;
           }
           &-right {
 
