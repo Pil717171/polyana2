@@ -296,7 +296,6 @@
       } else {
         button.classList.remove('open')
       }
-
     }
   }
 
