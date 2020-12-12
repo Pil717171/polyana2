@@ -245,21 +245,59 @@
     headerTop.classList.add('changed')
   }
 
-  function changePrivateData () {
-    let changeButton = document.querySelector('.private-block-change')
-    let staticBlock = document.querySelector('.private-block-static')
-    let dynamicBlock = document.querySelector('.private-block-dynamic')
-    let submitButton = dynamicBlock.querySelector('button')
+  function changePrivateData(selector) {
+    let selectorBlock = document.querySelector(selector)
+    let changeButton = selectorBlock.querySelector('.change-button');
+    let staticBlock = selectorBlock.querySelector('.private-block-static');
+    let dynamicBlock = selectorBlock.querySelector('.private-block-dynamic');
+    let submitButton = selectorBlock.querySelector('button');
+    let correctButton = selectorBlock.querySelector('.correct-button')
+  
     changeButton.addEventListener('click', (e) => {
-      e.stopPropagation()
-      staticBlock.classList.remove('active')
-      dynamicBlock.classList.add('active')
-    })
+      e.stopPropagation();
+      staticBlock.classList.remove('active');
+      dynamicBlock.classList.add('active');
+    });
     submitButton.addEventListener('click', (e) => {
-      e.preventDefault()
-      staticBlock.classList.add('active')
-      dynamicBlock.classList.remove('active')
+      e.preventDefault();
+      staticBlock.classList.add('active');
+      dynamicBlock.classList.remove('active');
+    });
+    if(correctButton) {
+      correctButton.addEventListener('click', (e) => {
+        e.preventDefault()
+        staticBlock.classList.remove('active');
+        dynamicBlock.classList.add('active');
+      })
+    }
+  }
+
+  function changeButtonShowing () {
+    let isValid = false
+    let firstFieldValid = false
+    let secondFieldValid = false
+    // for example
+    let newPasswordField = document.querySelector('#private-new-password')
+    let repeatPasswordField = document.querySelector('#private-new-password-repeat')
+    newPasswordField.addEventListener('input', (e) => {
+      firstFieldValid = !!e.target.value; 
+      (!!firstFieldValid && !!secondFieldValid) ? (isValid = true) : (isValid = false)
+      changedValidation(isValid)
     })
+    repeatPasswordField.addEventListener('input', (e) => {
+      secondFieldValid = !!e.target.value;
+      (!!firstFieldValid && !!secondFieldValid) ? (isValid = true) : (isValid = false)
+      changedValidation(isValid)
+    })
+    function changedValidation (isValid) {
+      let button = document.querySelector('.password .button')
+      if(isValid) {
+        button.classList.add('open')
+      } else {
+        button.classList.remove('open')
+      }
+
+    }
   }
 
 
@@ -269,7 +307,9 @@ document.addEventListener('DOMContentLoaded', () => {
     changeHeaderSize()
     cartVisible();
     addMask("#private-phone")
-    changePrivateData()
+    changePrivateData('.name')
+    changePrivateData('.address')
+    changeButtonShowing ()
   } else {
     initSlider()
     fixedMenu()

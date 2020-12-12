@@ -69,6 +69,17 @@ h4 {
     }
 }
 
+.underlined-dotted {
+    cursor: pointer;
+    border-bottom: 1px dashed #515257;
+    opacity: 0.7;
+    transition: 0.3s;
+    font-size: 12px;
+    &:hover {
+    opacity: 1;
+    }
+}
+
 .input-group {
     position: relative;
     margin-bottom: 20px;

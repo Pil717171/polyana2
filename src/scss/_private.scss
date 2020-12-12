@@ -1,8 +1,8 @@
 .private {
   padding-top: 100px;
-  padding-bottom: 263px;
   background: url('./../images/dishes/bg.png');
   background-repeat: repeat;
+  overflow: hidden;
   &-title {
     h2 {
       font-family: Montserrat;
@@ -67,6 +67,122 @@
       & .input-group {
         width: 300px;
       }
+    }
+    &-choice {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      &-data {
+        display: flex;
+        flex-direction: column;
+        min-width: 240px;
+        margin-right: 100px;
+      }
+      &-title {
+        p {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 20px;
+          color: #515257;
+        }
+      }
+      &-correct {
+
+      }
+    }
+    &.password {
+      .input-group {
+        width: 300px;
+      }
+      .button {
+        max-height: 0;
+        transition: 0.3s;
+        overflow: hidden;
+        & button {
+          margin-top: 10px;
+        }
+        &.open {
+          max-height: 100px;
+        }
+      }
+    }
+    & button {
+      margin-top: 30px;
+    }
+    &-back {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        cursor: pointer;
+        border-bottom: 1px dashed #515257;
+        opacity: 0.7;
+        transition: 0.3s;
+        font-size: 16px;
+        display: inline;
+        font-weight: 600;
+          &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &-input {
+    &-address {
+      display: flex;
+      flex-direction: column;
+      &-bottom {
+        display: flex;
+        justify-content: space-between;
+        & .input-group {
+          width: auto;
+          margin-left: 40px;
+          &:first-child {
+            min-width: 300px;
+            margin-left: 0;
+          }
+
+        }
+      }
+    }
+  }
+  &-bottom {
+    position: relative;
+    height: 263px;
+    img {
+      position: absolute;
+    }
+    .tom-red-3 {
+      top: 0;
+      right: 0;
+    }
+    .tom-red-2 {
+      bottom: -53px;
+      left: 20%;
+    }
+    .tom-yel {
+      top: 0;
+      left: 10px;
+      transform: rotate(-80deg);
+    }
+    .grass {
+      bottom: -190px;
+      left: 0;
+    }
+    .salad {
+      bottom: -215px;
+      left: 30%;
+    }
+    .thyme {
+      bottom: -130px;
+      left: 40px;
+    }
+    .halapen {
+      right: -74px;
+      bottom: -92px;
+      transform: rotate(-11deg);
     }
   }
 }
