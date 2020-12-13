@@ -240,9 +240,12 @@
   }
 
   // changed Header (different size main and other pages)
-  function changeHeaderSize () {
+  function changeHeaderSize (isOrders) {
     let headerTop = document.querySelector('.header-top')
     headerTop.classList.add('changed')
+    if(isOrders) {
+      headerTop.classList.add('bottom-hidden')
+    }
   }
 
   function changePrivateData(selector) {
@@ -302,13 +305,18 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   let privatePage = document.querySelector('.private')
+  let orderPage = document.querySelector('.orders')
   if(privatePage) {
     changeHeaderSize()
-    cartVisible();
+    cartVisible()
     addMask("#private-phone")
     changePrivateData('.name')
     changePrivateData('.address')
     changeButtonShowing ()
+  } else if(orderPage) {
+    changeHeaderSize(true)
+    changePrivateData('.name')
+    changePrivateData('.address')
   } else {
     initSlider()
     fixedMenu()

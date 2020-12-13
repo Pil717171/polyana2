@@ -143,8 +143,10 @@
             min-width: 300px;
             margin-left: 0;
           }
-
         }
+      }
+      select {
+        padding: 10px 13px !important;
       }
     }
   }
@@ -183,6 +185,17 @@
       right: -74px;
       bottom: -92px;
       transform: rotate(-11deg);
+    }
+  }
+  &-info {
+    p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 14px;
+      color: $mainBlack;
+      opacity: 0.8;
+      margin-top: 40px;
     }
   }
 }

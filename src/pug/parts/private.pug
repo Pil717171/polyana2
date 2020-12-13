@@ -26,19 +26,16 @@
                         .private-block-change.change-button
                             span Изменить
                     .private-block-dynamic
-                        form(name="private-adress")
+                        form(name="private-name")
                             .input-group
-                                input#private-adress-title.input-area(type='text' required='true')
-                                label.label(for='private-adress-title') Название
+                                input#private-name.input-area(type='text' required='true')
+                                label.label(for='private-adress-title') Имя
                             .input-group
-                                input#private-adress-street.input-area(type='text' required='true')
-                                label.label(for='private-adress-street') Улица
+                                input#private-phone.input-area(type='text' required='true')
+                                label.label(for='private-phone') Номер телефона
                             .input-group
-                                input#private-adress-build.input-area(type='text' required='true')
-                                label.label(for='private-adress-build') Дом
-                            .input-group
-                                input#private-adress-app.input-area(type='text' required='true')
-                                label.label(for='private-adress-app') Квартира
+                                input#private-email.input-area(type='email' required='true')
+                                label.label(for='private-email') Электронная почта
                             .button
                                 button.my-button(type="submit") Сохранить
                 .private-block.address

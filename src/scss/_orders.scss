@@ -1,0 +1,92 @@
+.orders {
+    min-height: 1500px;
+    background: url('./../images/dishes/bg.png');
+    background-repeat: repeat;
+    padding: 100px 0;
+    h2 {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 59px;
+        text-align: center;
+        color: #515257;
+    }
+    .cart-tips {
+        max-width: 400px;
+        width: 400px;
+        margin: 0 auto;
+        border: none;
+    }
+    .cart {
+        &-item {
+            position: relative;
+            &-title {
+                width: 230px;
+                max-width: 230px;
+                &-title {
+                    font-family: Montserrat;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                &-desc {
+
+                }
+            }
+            &-weight {
+                margin-right: 60px;
+            }
+            &-price {
+                display: flex;
+                justify-content: flex-end;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+            }
+            &-close {
+                position: absolute;
+                top: 30px;
+                right: -40px;
+            }
+        }
+        &-sause {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(81, 82, 87, 0.1);
+        }
+    }
+}
+
+.sause {
+    &-block {
+        display: flex;
+        flex-direction: column;
+        margin-left: 13px;
+        margin-right: 13px;
+        padding: 10px;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        &-button {
+            width: 100%;
+            height: 34px;
+        }
+        &-desc {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        &-price {
+            font-weight: 600;
+        }
+    }
+}

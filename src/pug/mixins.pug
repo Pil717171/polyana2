@@ -198,5 +198,40 @@ mixin cartItem (id, imgSrc, title, count, price)
         .cart-item-close
             img(src='./../images/cart/item-close.svg')
 
+mixin cartBigItem (id, imgSrc, title, desc, weight, count, price)
+    .cart-item
+        .cart-item-img
+            img(src=imgSrc)
+        .cart-item-title
+            .cart-item-title-title
+                p=title
+            .cart-item-title-desc
+                p=desc
+        .cart-item-weight
+            p=weight
+        .cart-item-counter
+            .dishes-card-counter
+                .dishes-card-counter-minus
+                    span -
+                .dishes-card-counter-count
+                    span 1
+                .dishes-card-counter-plus
+                    span +
+        .cart-item-price
+            p=price
+        .cart-item-close
+            img(src='./../images/cart/item-close.svg')
 
+mixin sauseBlock (id, imgSrc, title, price)
+    .sause-block
+        .sause-block-img
+            img(src=imgSrc, alt=title)
+        .sause-block-desc
+            .sause-block-title
+                p=title
+            .sause-block-price
+                p=price
+        .sause-block-button.my-button
+            span Добавить
+    
 

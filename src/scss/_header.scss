@@ -20,6 +20,11 @@
         background-repeat: repeat;
       }
     }
+    &.bottom-hidden {
+      .header-top-block-right-bot-wrapper {
+        display: none;
+      }
+    }
     &-block {
       display: flex;
       flex-direction: row;

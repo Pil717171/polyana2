@@ -1,0 +1,121 @@
+include ./../mixins
+.orders
+    .container
+        .row
+            .col-8.offset-2
+                .private-title 
+                    h2 Оформление заказа
+                .private-block
+                    .private-block-title
+                        h3 Ваш заказ
+                    .private-block-static.active
+                        .cart-wrapper 
+                            .cart-content
+                                +cartBigItem(1, './../images/dishes/burger.png', 'hhhhh', 'sdsadasdgasydgas', 225,  1, 123)
+                                +cartBigItem(1, './../images/dishes/burger.png', 'hhhhh', 'ddfsjbxkubdsyvsyjdvbsdyv', 300,  1, 123)
+                            .cart-tips
+                                .cart-tips-drink
+                                    p Выберите напиток
+                                    img(src="./../images/cart/drink.png" alt="drink")
+                                .cart-tips-sause
+                                    p Выберите соус
+                                    img(src="./../images/cart/sause.png" alt="sause")
+                            .cart-sause
+                                +sauseBlock(1, './../images/dishes/sause_1.png', 'кетчуп', 123 )
+                                +sauseBlock(1, './../images/dishes/sause_2.png', 'кетчуп', 123 )
+                                +sauseBlock(1, './../images/dishes/sause_3.png', 'кетчуп', 123 )
+                                +sauseBlock(1, './../images/dishes/sause_4.png', 'кетчуп', 123 )
+                            .cart-total
+                                .cat-total-text
+                                    h3 Сумма заказа
+                                .cat-total-price
+                                    h3 16,99 p.                    
+                .private-block.address
+                    .private-block-title
+                        h3 Адрес доставки
+                    .private-block-static.active
+                        .private-block-choice
+                            .private-block-choice-data
+                                .private-block-choice-title
+                                    p Домой
+                                .private-block-choice-text
+                                    p пр-т Космонавтов, д.48, кв.48
+                            //- .private-block-choice-correct
+                            //-     span.underlined-dotted.correct-button Редактировать
+                        //- .private-block-address.my-button.change-button
+                        //-     img(src='./../images/private/add.svg' alt='add')
+                        //-     span Добавить адрес
+                        .private-block-change.change-button
+                            span Изменить
+                    .private-block-dynamic
+                        form(name="private-change")
+                            .private-input-address
+                                .private-input-address-top 
+                                    .input-group
+                                        select#private-address-title.input-area(type='text' required='true')
+                                            option(value="Домой") Домой
+                                            option(value="Работа") Работа
+                                        label.label(for='private-address-title') Название
+                                .private-input-address-bottom
+                                    .input-group
+                                        input#private-address-street.input-area(type='text' required='true')
+                                        label.label(for='private-address-street') Улица
+                                    .input-group
+                                        input#private-address-build.input-area(type='text' required='true')
+                                        label.label(for='private-address-build') Дом
+                                    .input-group
+                                        input#private-address-app.input-area(type='text' required='true')
+                                        label.label(for='private-address-app') Квартира
+                            .button
+                                button.my-button(type="submit") Сохранить
+                .private-block.name
+                    .private-block-title
+                        h3 Личные данные
+                    .private-block-static.active
+                        .private-block-static-item
+                            .private-block-static-title
+                                p Имя
+                            .private-block-static-prop
+                                p Константин
+                        .private-block-static-item
+                            .private-block-static-title
+                                p Номер телефона
+                            .private-block-static-prop
+                                p +375 (29) 123-78-23
+                        .private-block-static-item
+                            .private-block-static-title
+                                p Электронная почта
+                            .private-block-static-prop
+                                p tim.jennings@example.com
+                        .private-block-change.change-button
+                            span Изменить
+                    .private-block-dynamic
+                        form(name="private-name")
+                            .input-group
+                                input#private-name.input-area(type='text' required='true')
+                                label.label(for='private-adress-title') Имя
+                            .input-group
+                                input#private-phone.input-area(type='text' required='true')
+                                label.label(for='private-phone') Номер телефона
+                            .input-group
+                                input#private-email.input-area(type='email' required='true')
+                                label.label(for='private-email') Электронная почта
+                            .button
+                                button.my-button(type="submit") Сохранить
+                .private-block.pay
+                    .private-block-title
+                        h3 Способ оплаты
+                    .private-block-static.active
+                        .radio
+                            label.custom-radio
+                                input(type='radio' name='color' value='card')
+                                span Картой курьеру
+                        .radio
+                            label.custom-radio
+                                input(type='radio' name='color' value='cash')
+                                span Наличными
+                .my-button
+                    span Оформить заказ на &nbsp;
+                    span 16 р
+                .private-info
+                    p Если у вас не получается оформить заказ, свяжитесь с оператором по телефону +375 (29) 444-75-21 или проверьте правильность заполнения данных
