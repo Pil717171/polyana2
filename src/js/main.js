@@ -302,10 +302,27 @@
     }
   }
 
+  function jobSpoilers () {
+    let spoilers = document.querySelectorAll('.job-item')
+    spoilers.forEach((spoiler) => {
+      let spoilerButton = spoiler.querySelector('.job-item-top')
+      spoilerButton.addEventListener('click', (e) => {
+        e.stopPropagation()
+        let spoilerText = spoiler.querySelector('.job-item-bottom')
+        let spoilerIcon = spoiler.querySelector('img')
+        spoilerText.classList.toggle('open')
+        spoilerIcon.classList.toggle('open')
+      })
+    })
+  }
+
 
 document.addEventListener('DOMContentLoaded', () => {
   let privatePage = document.querySelector('.private')
   let orderPage = document.querySelector('.orders')
+  let promoPage = document.querySelector('.promo')
+  let jobPage = document.querySelector('.job')
+
   if(privatePage) {
     changeHeaderSize()
     cartVisible()
@@ -317,6 +334,13 @@ document.addEventListener('DOMContentLoaded', () => {
     changeHeaderSize(true)
     changePrivateData('.name')
     changePrivateData('.address')
+  } else if (promoPage) {
+    changeHeaderSize()
+    cartVisible()
+  } else if (jobPage) {
+    changeHeaderSize()
+    cartVisible()
+    jobSpoilers()
   } else {
     initSlider()
     fixedMenu()

@@ -1,0 +1,102 @@
+.job {
+  padding-top: 100px;
+  background: url('./../images/dishes/bg.png');
+  background-repeat: repeat;
+  overflow: hidden;
+  &-title {
+    h2 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 59px;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+  }
+  &-subtitle {
+    p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      &:first-child {
+        margin-bottom: 15px;
+      }
+    }
+    a {
+      text-decoration: none;
+      border-bottom: 1px dashed #515257 ;
+    }
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 60px;
+    background: #F8F6F4;
+    border: 1px solid rgba(243, 243, 243, 0.2);
+    box-sizing: border-box;
+    box-shadow: 0px 10px 20px rgba(52, 51, 49, 0.04), 0px 2px 6px rgba(52, 51, 49, 0.04), 0px 0px 1px rgba(52, 51, 49, 0.04);
+    border-radius: 3px;
+    margin-top: 40px;
+    &-top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    &-title {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+    }
+    &-arrow {
+      img {
+        transform: rotate(0);
+        transition: 0.5s;
+        &.open {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+    &-bottom {
+      max-height: 0px;
+      opacity: 0;
+      transition: 0.5s;
+      &.open {
+        padding-top: 20px;
+        opacity: 1;
+        max-height: 500px;
+      }
+      &-block {
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      &-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      &-title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .private-bottom {
+    height: 122px;
+  }
+  .tom-yel {
+    top: -100px;
+  }
+}

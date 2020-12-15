@@ -1,0 +1,20 @@
+include ./../mixins.pug
+.promo
+    .container
+        .row
+            .col-12
+                .promo-title
+                    h2 Акции доставки и самовывоза
+                .promo-items
+                    .row
+                        +promoItem(false, './../../images/promo/promo_1.png', 'Даем супер условия корпоративным клиентам, на мероприятия и праздники, просто оставьте свою заявку!', 'За дополнительной информацией звоните по тел. +375 29 623 2110 или пишите на zakaz@polyana.by c указанием имени, контактного номера телефона и дополнительной информации о мероприятии, желаемом заказе.', '')
+                        +promoItem(true, './../../images/promo/promo_2.png', 'Даем супер условия корпоративным клиентам', 'Подарочный бургер на выбор: "Мексиканская", "Пепперони", "Ветчина и грибы", Греческая", "Цыпленок Барбекю". Акция действует при заказе или навынос. В выходные и праздничные дни акция не действует.', 'Выбрать бургер')
+                        +promoItem(true, './../../images/promo/promo_3.png', 'Даем супер условия', 'Начинаем с раннего завтрака 9:30 и продолжаем кормить до позднего завтрака 16:00. Закажи на сайте.', 'Выбрать завтрак')
+    .private-bottom
+        img.tom-red-2(src="./../images/footer/tom-red-2.png", alt="tom")
+        img.tom-red-3(src="./../images/footer/tom-red-3.png", alt="tom")
+        img.tom-yel(src="./../images/footer/tom-yel.png", alt="tom")
+        img.halapen(src="./../images/footer/halapen.png", alt="tom")
+        img.grass(src="./../images/footer/grass.png", alt="tom")
+        img.salad(src="./../images/footer/salad.png", alt="tom")
+        img.thyme(src="./../images/footer/thyme.png", alt="tom")

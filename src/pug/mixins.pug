@@ -235,3 +235,35 @@ mixin sauseBlock (id, imgSrc, title, price)
             span Добавить
     
 
+mixin promoItem (isButton, imgSrc, title, text, buttonText)
+    .col-6
+        .promo-item
+            .promo-item-top
+                .promo-item-img
+                    img(src=imgSrc alt=title)
+            .promo-item-bottom
+                .promo-item-desc
+                    .promo-item-title
+                       p=title
+                    .promo-item-text
+                        p=text
+                if isButton
+                    .promo-item-button.my-button
+                        span=buttonText
+
+mixin jobItem (title, textArray)
+    .job-item
+        .job-item-top
+            .job-item-title
+                p=title
+            .job-item-arrow
+                img(src='./../images/job/arrow.svg')
+        .job-item-bottom
+            each subText in textArray
+                .job-item-bottom-block
+                    p.job-item-bottom-title=subText.subtitle
+                    each item in subText.items
+                        p.job-item-bottom-text=item
+
+
+
