@@ -11,6 +11,9 @@
       clickable: true,
     },
     mousewheel: true,
+    loop: true,
+    autoplay: true,
+    speed: 600,
     keyboard: true,
   })
 }

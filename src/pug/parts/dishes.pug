@@ -5,10 +5,10 @@ include ./../mixins.pug
         .row
             .col
                 +burgerBlock('Бургеры', [{name: 'Острые', url: './../images/dishes/spice.svg'}, {name: 'Вегетарианскике', url: './../images/dishes/veg.svg'}])
-                //+sandwichBlock('Сендвичи', [{name: 'Острые', url: './../images/dishes/spice.svg'}, {name: 'Вегетарианскике', url: './../images/dishes/veg.svg'}])
-                //+snacksBlock('Закуски', [])
-                //+sauseBlock('Соусы', [])
-                //+sweetsBlock('Десерты', [])
-                //+drinksBlock('Напитки', [])
-                //+breakfastBlock('Завтрак до 14:00', [])
+                +sandwichBlock('Сендвичи', [{name: 'Острые', url: './../images/dishes/spice.svg'}, {name: 'Вегетарианскике', url: './../images/dishes/veg.svg'}])
+                +snacksBlock('Закуски', [])
+                +sauseBlock('Соусы', [])
+                +sweetsBlock('Десерты', [])
+                +drinksBlock('Напитки', [])
+                +breakfastBlock('Завтрак до 14:00', [])
     img(class="dishes-line" src="./../images/dishes/line_bot.svg")
