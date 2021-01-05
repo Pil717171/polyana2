@@ -1,0 +1,88 @@
+.header-mobile {
+    height: 40px;
+    display: none;
+    background-color: #F8F6F4;
+    @media(max-width: 1024px) {
+        display: flex;
+        position: sticky;
+        top: 0;
+        z-index: 3;
+    }
+    &-wrapper {
+        display: flex;
+        position: relative;
+        height: 40px;
+        padding-left: 92px;
+    }
+    &-left {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    &-logo {
+        width: 80px;
+        height: 71px;
+        background: #515257;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        img {
+            width: 80%;
+        }
+    }
+    &-phone {
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+        line-height: 12px;
+        img {
+            height: 11px;
+            width: 7px;
+            margin-right: 3px;
+        }
+    }
+    &-right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-grow: 1;
+    }
+    &-hamburger {
+        width: 32px;
+        height: 17px;
+        position: relative;
+        margin-left: 11px;
+        &-block {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            height: 2px;
+            background: #515257;
+            border-radius: 8px;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            top: 7px;
+            left: 0;
+            height: 2px;
+            background: #515257;
+            border-radius: 8px
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            bottom: 1px;
+            left: 0;
+            height: 2px;
+            background: #515257;
+            border-radius: 8px
+        }
+    }
+}

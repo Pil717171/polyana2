@@ -316,5 +316,21 @@
     &-bottom {
       display: none;
     }
+    &-slider {
+      height: 285px;
+    }
+    &-fixed {
+      display: none;
+      &.open {
+        height: 0;
+        transform: translateY(-105%);
+      }
+    }
+
+  }
+  @media(max-width: 480px) {
+    &-slider {
+      height: 185px;
+    }
   }
 }

@@ -1,21 +1,26 @@
   // slider
   function initSlider () {
   var mySwiper = new Swiper('.swiper-container', {
-    cssMode: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    mousewheel: true,
+    // cssMode: true,
+    // mousewheel: true,
     loop: true,
     autoplay: true,
     speed: 600,
     keyboard: true,
+    breakpoints: {
+      1024: {
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      },
+    }
   })
+
 }
   // map
   function initMap () {

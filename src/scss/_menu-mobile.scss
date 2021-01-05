@@ -1,0 +1,11 @@
+.menu-mobile {
+    display: none;
+    height: 50px;
+    background-color: #F8F6F4;
+    position: sticky;
+    top: 39px;
+    z-index: 2;
+    @media(max-width: 480px) {
+        display: block;
+    }
+}

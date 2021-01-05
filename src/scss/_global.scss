@@ -20,6 +20,15 @@ a {
     }
 }
 
+p {
+    //font-size: 20px;
+    //line-height: 24px;
+    //@media(max-width: 1024px) {
+    //    font-size: 14px;
+    //    line-height: 17px;
+    //}
+}
+
 h1 {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -28,6 +37,11 @@ h1 {
     line-height: 78px;
     letter-spacing: 0.02em;
     color: $mainBlack;
+    @media (max-width: 1024px) {
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: 0.02em;
+    }
 }
 
 h3 {
