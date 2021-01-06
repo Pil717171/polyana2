@@ -1,11 +1,77 @@
 .menu-mobile {
     display: none;
-    height: 50px;
-    background-color: #F8F6F4;
     position: sticky;
-    top: 39px;
-    z-index: 2;
-    @media(max-width: 480px) {
+    top: 40px;
+    background-color: #F8F6F4;
+    z-index: 3;
+    transition: 0.1s ease-in-out;
+    &-wrapper {
+        display: flex;
+        height: 50px;
+
+        align-items: center;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        justify-content: space-between;
+        a {
+            margin-right: 15px;
+            &:last-child {
+                margin-right: 0;
+            }
+            &.active {
+                color: $activeColor;
+            }
+        }
+    }
+    &-item {
+        p {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+    &-bottom {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        background: #F8F6F4;
+        width: 100%;
+        z-index: 4;
+        align-items: center;
+        height: 45px;
+        span {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+        }
+        img {
+            bottom: 2px;
+            position: relative;
+            margin-right: 6px;
+        }
+    }
+    &-sign {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-cart {
+        width: 70%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $activeColor;
+        span {
+            color: #ffffff;
+        }
+    }
+    @media(max-width: 1024px) {
         display: block;
+        &-bottom {
+            display: flex;
+        }
     }
 }

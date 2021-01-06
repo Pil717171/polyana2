@@ -23,19 +23,35 @@
 
 }
   // map
+  function zoomCenterCalculated () {
+    if(document.body.clientWidth > 768) {
+      return {
+        center: [ 23.831875433137625, 53.68126321102553],
+        zoom: 14
+      }
+    } else {
+      return {
+        center: [23.83091713937516, 53.665299429424074],
+        zoom: 12
+      }
+    }
+  }
+
   function initMap () {
+    var optionsObj = zoomCenterCalculated()
     mapboxgl.accessToken = 'pk.eyJ1IjoicGlsNzE3MTcxIiwiYSI6ImNrMHl6ZHRzZDA5NjIzbnBlbXFjNG1ieDAifQ.PlTvgO1WM00hT6-OMxJsWA';
+    console.log(optionsObj)
     var map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: [ 23.831875433137625, 53.68126321102553],
-      zoom: 14
+      center: optionsObj.center,
+      zoom: optionsObj.zoom
     });
     var myMarker = document.createElement('div')
     myMarker.className = 'marker'
 
     var marker = new mapboxgl.Marker(myMarker)
-      .setLngLat([23.831875433137625, 53.68126321102553])
+      .setLngLat([23.831097576159063, 53.682273120859275])
       .addTo(map);
     map.addControl(new mapboxgl.NavigationControl());
     map.on('load', function () {
@@ -131,7 +147,7 @@
     let menuPosition = menu.getBoundingClientRect().top + pageYOffset + menuHeight
     let isMenuOpen = false
     if(menu) {
-      window.addEventListener('scroll', (e) => {
+      document.addEventListener('scroll', (e) => {
         if((pageYOffset >= menuPosition) && !isMenuOpen) {
           fixedMenu.classList.add('open')
           isMenuOpen = true
@@ -324,6 +340,39 @@
     })
   }
 
+  function mobileMenuOpen () {
+    let headerMobile = document.querySelector('.header-mobile')
+    let hamburgerButton = document.querySelector('.header-mobile-hamburger')
+    let headerMobileMenu = document.querySelector('.header-mobile-menu')
+    let body = document.body
+    hamburgerButton.addEventListener('click', (e) => {
+      let headerMobileGrey = document.querySelector('.header-mobile.grey')
+      headerMobile.classList.toggle('open')
+      headerMobileMenu.classList.toggle('open')
+      body.classList.toggle('body-hidden')
+      if(headerMobileGrey) {
+        headerMobileGrey.classList.remove('grey')
+      } else {
+        headerMobileChanged()
+      }
+    })
+  }
+
+  function headerMobileChanged () {
+    let headerMobile = document.querySelector('.header-mobile')
+    let menuMobile = document.querySelector('.menu-mobile')
+
+    let headerBottom = headerMobile.getBoundingClientRect().bottom
+    let menuTop = menuMobile.getBoundingClientRect().top
+
+    if(menuTop <= headerBottom) {
+      (headerMobile.classList.add('grey'),
+      menuMobile.classList.add('sticky'))
+    } else {
+      (headerMobile.classList.remove('grey'),
+      menuMobile.classList.remove('sticky'))
+    }
+  }
 
 document.addEventListener('DOMContentLoaded', () => {
   let privatePage = document.querySelector('.private')
@@ -349,7 +398,8 @@ document.addEventListener('DOMContentLoaded', () => {
     changeHeaderSize()
     cartVisible()
     jobSpoilers()
-  } else {
+  }
+  else {
     initSlider()
     fixedMenu()
     initMap()
@@ -358,9 +408,9 @@ document.addEventListener('DOMContentLoaded', () => {
     addMask("#phone-reg")
     authVisible()
     loginRegistrationChanging()
+    mobileMenuOpen()
+    window.addEventListener('scroll', headerMobileChanged )
   }
-
-
 })
 
 

@@ -11,6 +11,16 @@ body {
     background-color: #F8F6F4;
 }
 
+.body {
+    &-wrapper {
+        height: 100vh;
+        overflow: auto;
+    }
+    &-hidden {
+        overflow: hidden;
+    }
+}
+
 a {
     text-decoration: none;
     color: $mainBlack;
@@ -44,6 +54,16 @@ h1 {
     }
 }
 
+h2 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 59px;
+    @media(max-width: 1024px) {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
 h3 {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -51,6 +71,11 @@ h3 {
     font-size: 24px;
     line-height: 29px;
     color: $mainBlack;
+    @media(max-width: 1024px) {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+    }
 }
 
 h4 {
@@ -61,6 +86,11 @@ h4 {
     line-height: 24px;
     letter-spacing: 0.02em;
     color: $mainBlack;
+    @media(max-width: 1024px) {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+    }
 }
 
 .my-button {
@@ -93,6 +123,17 @@ h4 {
     font-size: 12px;
     &:hover {
     opacity: 1;
+    }
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.mobile-hide {
+    display: block;
+    @media(max-width: 1024px) {
+        display: none;
     }
 }
 

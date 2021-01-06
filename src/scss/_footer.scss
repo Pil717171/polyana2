@@ -155,4 +155,115 @@
       }
     }
   }
+  @media(max-width: 1024px) {
+    &-top {
+      padding-top: 35px;
+      &-block {
+        align-items: center;
+      }
+      &-title {
+        height: auto;
+        margin-bottom: 10px;
+      }
+      &-text {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      &-bot {
+        display: none;
+      }
+      & img {
+        transform: scale(0.4);
+        max-width: none;
+      }
+      &-tomato-red {
+        right: -17px;
+      }
+      &-tomato-right {
+        right: -30px;
+      }
+      &-tomato-left {
+        top: 100px;
+      }
+      &-halapen {
+        bottom: -75px;
+        right: -100px;
+      }
+      &-grass {
+        left: -45px;
+      }
+      &-thyme {
+        left: -90px;
+      }
+      &-paper {
+        top: 57px;
+        right: -110px;
+      }
+      &-burger {
+        top: 220px;
+        right: 43px;
+      }
+    }
+  }
+  @media(max-width: 768px) {
+    &-top {
+      img {
+        transform: scale(0.4);
+      }
+      &-burger {
+        right: -20px;
+      }
+      &-paper {
+        top: 43px;
+        right: -176px;
+      }
+    }
+    &-bot {
+      padding-top: 30px;
+      padding-bottom: 60px;
+      p {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+      }
+      &-link {
+        a {
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+      &-left {
+        &-top {
+          margin-bottom: 30px;
+        }
+        &-item {
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+      &-pays {
+        padding-top: 25px;
+        &-bot {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+        }
+      }
+      &-right {
+        flex-direction: row;
+        div {
+          width: 50%;
+          &:last-child {
+            padding-left: 15px;
+          }
+        }
+        &-bot {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between
+        }
+      }
+    }
+  }
+
 }

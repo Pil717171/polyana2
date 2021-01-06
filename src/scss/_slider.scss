@@ -47,7 +47,10 @@
                 &-active {
                     background: #5AACB8;
                 }
-            }   
+            }
+            @media(max-width: 1024px) {
+                display: none;
+            }
         }
     }
     &-text {

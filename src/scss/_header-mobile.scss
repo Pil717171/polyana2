@@ -2,12 +2,7 @@
     height: 40px;
     display: none;
     background-color: #F8F6F4;
-    @media(max-width: 1024px) {
-        display: flex;
-        position: sticky;
-        top: 0;
-        z-index: 3;
-    }
+    transition: 0.1s;
     &-wrapper {
         display: flex;
         position: relative;
@@ -29,6 +24,7 @@
         position: absolute;
         top: 0;
         left: 0;
+        transition: 0.1s;
         img {
             width: 80%;
         }
@@ -63,6 +59,8 @@
             height: 2px;
             background: #515257;
             border-radius: 8px;
+            transition: 0.3s ease-in-out;
+            transform: rotate(0deg) translate(0px, 0px)
         }
         &:after {
             content: '';
@@ -72,7 +70,10 @@
             left: 0;
             height: 2px;
             background: #515257;
-            border-radius: 8px
+            border-radius: 8px;
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+            transform: rotate(0deg) translate(0px, 0px)
         }
         &:before {
             content: '';
@@ -82,7 +83,63 @@
             left: 0;
             height: 2px;
             background: #515257;
-            border-radius: 8px
+            border-radius: 8px;
+            transition: 0.3s ease-in-out;
+        }
+    }
+    &.open {
+        .header-mobile {
+            &-hamburger {
+                &-block {
+                    transform: rotate(45deg) translate(5px, 5px);
+                }
+                &:before {
+                    transform: rotate(-45deg) translate(5px, -5px);
+                }
+                &:after {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    &.grey {
+        background: #EFEAE3;
+        //height: 52px;
+        .header-mobile {
+            &-logo {
+                width: 54px;
+                height: 40px;
+            }
+            &-wrapper {
+                background: #EFEAE3;
+                height: 40px;
+            }
+        }
+    }
+    &-menu {
+        display: none;
+    }
+    @media(max-width: 1024px) {
+        display: flex;
+        position: sticky;
+        top: 0;
+        z-index: 4;
+        &-menu {
+            display: flex;
+            max-height: 0;
+            height: 0;
+            transition: 0.3s ease-in-out;
+            position: absolute;
+            top: 39px;
+            left: 0;
+            width: 100%;
+            z-index: -1;
+            background: #EFEAE3;
+            &.open {
+                max-height: 100vh;
+                height: 100vh;
+                background: #EFEAE3;
+            }
         }
     }
 }

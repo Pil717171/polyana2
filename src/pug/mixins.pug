@@ -144,13 +144,13 @@ mixin breakfastBlock (dish, types)
                                 img(src=val.url alt=val.name)
                             .dishes-title-text=val.name
         .row
-            .col-12.col-md-4.col-xl-3
+            .col-12.col-md-6.col-lg-4.col-xl-3
                 +dishCard('1', '270', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '7,39', [ './../images/dishes/spice.svg'])
-            .col-12.col-md-4.col-xl-3
+            .col-12.col-md-6.col-lg-4.col-xl-3
                 +dishCard('1', '270', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '7,39', [ './../images/dishes/spice.svg'])
-            .col-12.col-md-4.col-xl-3
+            .col-12.col-md-6.col-lg-4.col-xl-3
                 +dishCard('1', '270', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '7,39', [ './../images/dishes/spice.svg'])
-            .col-12.col-md-4.col-xl-3
+            .col-12.col-md-6.col-lg-4.col-xl-3
                 +dishCard('1', '270', './../images/dishes/burger.png', 'Гриль чизбургер', 'Котлета из 100% говядины, сыр чеддер маринованные огурцы, жареный сыр, фирменный соус (Yum Yum), американская горчица, булка', '7,39', [ './../images/dishes/spice.svg'])
 
 mixin dishCard (id, weight, srcImg, title, desc, price, typeArray)
@@ -161,13 +161,43 @@ mixin dishCard (id, weight, srcImg, title, desc, price, typeArray)
             .dishes-card-type
                 each type in typeArray
                   img(src=type)
-        .dishes-card-img
-            img(src=srcImg alt=title)
-        .dishes-card-text
-            .dishes-card-title
-                h4=title
-            .dishes-card-desc
-                p=desc
+        .dishes-card-desc-wrapper
+            .dishes-card-img
+                img(src=srcImg alt=title)
+            .dishes-card-text
+                .dishes-card-title
+                    h4=title
+                .dishes-card-desc
+                    p=desc
+        .dishes-card-price
+            .dishes-card-price-left
+                h4=price
+            .dishes-card-price-right
+                .dishes-card-counter
+                    .dishes-card-counter-minus
+                        span -
+                    .dishes-card-counter-count
+                        span 1
+                    .dishes-card-counter-plus
+                        span +
+        .dishes-card-button В корзину
+
+mixin sauseCard (id, weight, srcImg, title, desc, price, typeArray)
+    .dishes-card.sause(data-id=id data-src=srcImg data-title=title data-price=price)
+        .dishes-card-top
+            .dishes-card-weight
+                p=weight
+            .dishes-card-type
+                each type in typeArray
+                    img(src=type)
+        .dishes-card-desc-wrapper
+            .dishes-card-img
+                img(src=srcImg alt=title)
+            .dishes-card-text
+                .dishes-card-title
+                    h4=title
+                .dishes-card-desc
+                    p=desc
         .dishes-card-price
             .dishes-card-price-left
                 h4=price
