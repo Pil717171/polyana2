@@ -33,7 +33,7 @@ a {
 p {
     //font-size: 20px;
     //line-height: 24px;
-    //@media(max-width: 1024px) {
+    //@media(max-width: 991px) {
     //    font-size: 14px;
     //    line-height: 17px;
     //}
@@ -47,7 +47,7 @@ h1 {
     line-height: 78px;
     letter-spacing: 0.02em;
     color: $mainBlack;
-    @media (max-width: 1024px) {
+    @media (max-width: 991px) {
         font-size: 24px;
         line-height: 29px;
         letter-spacing: 0.02em;
@@ -58,7 +58,7 @@ h2 {
     font-weight: 600;
     font-size: 48px;
     line-height: 59px;
-    @media(max-width: 1024px) {
+    @media(max-width: 991px) {
         font-size: 18px;
         line-height: 22px;
     }
@@ -71,7 +71,7 @@ h3 {
     font-size: 24px;
     line-height: 29px;
     color: $mainBlack;
-    @media(max-width: 1024px) {
+    @media(max-width: 991px) {
         font-weight: 600;
         font-size: 18px;
         line-height: 22px;
@@ -86,7 +86,7 @@ h4 {
     line-height: 24px;
     letter-spacing: 0.02em;
     color: $mainBlack;
-    @media(max-width: 1024px) {
+    @media(max-width: 991px) {
         font-weight: 600;
         font-size: 16px;
         line-height: 20px;
@@ -132,7 +132,7 @@ h4 {
 
 .mobile-hide {
     display: block;
-    @media(max-width: 1024px) {
+    @media(max-width: 991px) {
         display: none;
     }
 }

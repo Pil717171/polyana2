@@ -8,7 +8,7 @@
     speed: 600,
     keyboard: true,
     breakpoints: {
-      1024: {
+      991: {
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -344,18 +344,24 @@
     let headerMobile = document.querySelector('.header-mobile')
     let hamburgerButton = document.querySelector('.header-mobile-hamburger')
     let headerMobileMenu = document.querySelector('.header-mobile-menu')
+    let mainPage = document.querySelector('.slider')
     let body = document.body
     hamburgerButton.addEventListener('click', (e) => {
       let headerMobileGrey = document.querySelector('.header-mobile.grey')
       headerMobile.classList.toggle('open')
       headerMobileMenu.classList.toggle('open')
       body.classList.toggle('body-hidden')
-      if(headerMobileGrey) {
+      if(headerMobileGrey && mainPage) {
         headerMobileGrey.classList.remove('grey')
       } else {
         headerMobileChanged()
       }
     })
+  }
+
+  function notMainMobileHeader () {
+    let headerMobile = document.querySelector('.header-mobile')
+    headerMobile.classList.add('grey')
   }
 
   function headerMobileChanged () {
@@ -398,6 +404,8 @@ document.addEventListener('DOMContentLoaded', () => {
     changeHeaderSize()
     cartVisible()
     jobSpoilers()
+    mobileMenuOpen()
+    notMainMobileHeader()
   }
   else {
     initSlider()

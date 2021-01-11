@@ -5,10 +5,10 @@
   overflow: hidden;
   &-title {
     h2 {
-      font-style: normal;
-      font-weight: 600;
-      font-size: 48px;
-      line-height: 59px;
+      //font-style: normal;
+      //font-weight: 600;
+      //font-size: 48px;
+      //line-height: 59px;
       text-align: center;
       margin-bottom: 60px;
     }
@@ -101,5 +101,54 @@
   }
   .tom-red-3 {
     top: -110px;
+  }
+  @media(max-width: 991px) {
+    padding-top: 25px;
+    &-title {
+      h2 {
+        margin-bottom: 40px;
+      }
+    }
+    &-item {
+      margin-top: 20px;
+      padding: 15px 20px;
+      &-title {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      &-bottom {
+        &-text {
+          font-size: 14px;
+          line-height: 17px;
+          margin-bottom: 7px;
+        }
+      }
+    }
+    .private-bottom {
+      height: 175px;
+      img {
+        transform: scale(0.5);
+      }
+      .tom-yel {
+        top: 0px;
+        left: -21px;
+      }
+      .tom-yel-2 {
+        display: none;
+      }
+      .tom-red-2 {
+        display: none;
+      }
+      .tom-red-3 {
+        top: 0;
+        right: -25px;
+      }
+      .grass {
+        left: -50px;
+      }
+      .salad {
+        left: 7%;
+      }
+    }
   }
 }
