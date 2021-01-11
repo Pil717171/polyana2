@@ -5,11 +5,11 @@
   overflow: hidden;
   &-title {
     h2 {
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 48px;
-      line-height: 59px;
+      //font-family: Montserrat;
+      //font-style: normal;
+      //font-weight: 600;
+      //font-size: 48px;
+      //line-height: 59px;
       text-align: center;
     }
     margin-bottom: 60px;
@@ -22,6 +22,7 @@
     box-shadow: 0px 10px 20px rgba(52, 51, 49, 0.04), 0px 2px 6px rgba(52, 51, 49, 0.04), 0px 0px 1px rgba(52, 51, 49, 0.04);
     border-radius: 3px;
     margin-bottom: 40px;
+    overflow: hidden;
     &-title {
       margin-bottom: 30px;
     }
@@ -200,6 +201,22 @@
       color: $mainBlack;
       opacity: 0.8;
       margin-top: 40px;
+    }
+  }
+  @media(max-width: 991px) {
+    &-title {
+      margin-bottom: 40px;
+    }
+    &-block {
+      padding: 30px 20px 5px;
+      &-title {
+        margin-bottom: 15px;
+        h3 {
+          font-size: 16px;
+          line-height: 20px;
+          text-align: center;
+        }
+      }
     }
   }
 }

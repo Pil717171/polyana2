@@ -234,23 +234,27 @@ mixin cartBigItem (id, imgSrc, title, desc, weight, count, price)
     .cart-item
         .cart-item-img
             img(src=imgSrc)
-        .cart-item-title
-            .cart-item-title-title
-                p=title
-            .cart-item-title-desc
-                p=desc
-        .cart-item-weight
-            p=weight
-        .cart-item-counter
-            .dishes-card-counter
-                .dishes-card-counter-minus
-                    span -
-                .dishes-card-counter-count
-                    span 1
-                .dishes-card-counter-plus
-                    span +
-        .cart-item-price
-            p=price
+        .cart-item-body
+            .cart-item-title
+                .cart-item-title-title
+                    p=title
+                .cart-item-weight-mobile.desktop-hide
+                    p=weight
+                .cart-item-title-desc
+                    p=desc
+            .cart-item-weight.mobile-hide
+                p=weight
+            .cart-item-counter-wrapper
+                .cart-item-counter
+                    .dishes-card-counter
+                        .dishes-card-counter-minus
+                            span -
+                        .dishes-card-counter-count
+                            span 1
+                        .dishes-card-counter-plus
+                            span +
+                .cart-item-price
+                    p=price
         .cart-item-close
             img(src='./../images/cart/item-close.svg')
 

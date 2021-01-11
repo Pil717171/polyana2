@@ -4,13 +4,13 @@
     background-repeat: repeat;
     padding: 100px 0;
     h2 {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 48px;
-        line-height: 59px;
+        //font-family: Montserrat;
+        //font-style: normal;
+        //font-weight: 600;
+        //font-size: 48px;
+        //line-height: 59px;
         text-align: center;
-        color: #515257;
+        //color: #515257;
     }
     .cart-tips {
         max-width: 400px;
@@ -21,6 +21,7 @@
     .cart {
         &-item {
             position: relative;
+            align-items: flex-start;
             &-title {
                 width: 230px;
                 max-width: 230px;
@@ -59,6 +60,103 @@
             border-bottom: 1px solid rgba(81, 82, 87, 0.1);
         }
     }
+    @media(max-width: 1200px) {
+        .cart {
+            &-item {
+                &-title {
+                    width: 170px;
+                }
+                &-weight {
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+    @media(max-width: 991px) {
+        padding-top: 25px;
+        .cart {
+            &-item {
+                &-img {
+                    width: 25%;
+                    height: 80px;
+                    margin-right: 0;
+                    left: -25px;
+                    position: relative;
+                    overflow: visible;
+                    img {
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: right top;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        margin-right: 0;
+                    }
+                }
+                &-body  {
+                    width: 75%;
+                }
+                &-close {
+                    top: 15px;
+                    right: -5px;
+                }
+                &-title {
+                    width: auto;
+                    max-width: none;
+                    &-title {
+                        font-size: 14px;
+                        line-height: 17px;
+                        margin-bottom: 5px;
+                    }
+                    &-desc {
+                        font-size: 14px;
+                        line-height: 17px;
+                        opacity: 0.85;
+                        margin-bottom: 20px;
+                    }
+                }
+                &-weight-mobile {
+                    font-size: 10px;
+                    line-height: 12px;
+                    margin-bottom: 10px;
+                }
+                &-price {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+            &-tips {
+                width: auto;
+                margin: 0 auto;
+                width: 100%;
+                &-drink {
+                    padding-left: 8px;
+                    height: 47px;
+                    font-size: 16px;
+                    line-height: 20px;
+                    img {
+                        height: 52px;
+                    }
+                }
+                &-sause {
+                    padding-right: 20px;
+                    height: 47px;
+                    font-size: 16px;
+                    line-height: 20px;
+                    img {
+                        height: 65px;
+                    }
+                }
+            }
+            &-sause {
+                flex-wrap: wrap;
+                &-block {
+                    width: 40%;
+                    margin: 15px;
+                }
+            }
+        }
+    }
 }
 
 .sause {
@@ -87,6 +185,23 @@
         }
         &-price {
             font-weight: 600;
+        }
+    }
+    @media(max-width: 991px) {
+        &-block {
+            margin: 0 10px;
+            width: 40%;
+            &:first-child {
+                margin: 0 10px;
+            }
+            &:last-child {
+                margin: 0 10px;
+            }
+            &-button {
+                font-size: 12px;
+                line-height: 15px;
+            }
+
         }
     }
 }

@@ -397,6 +397,8 @@ document.addEventListener('DOMContentLoaded', () => {
     changeHeaderSize(true)
     changePrivateData('.name')
     changePrivateData('.address')
+    mobileMenuOpen()
+    notMainMobileHeader()
   } else if (promoPage) {
     changeHeaderSize()
     cartVisible()

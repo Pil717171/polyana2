@@ -137,6 +137,13 @@ h4 {
     }
 }
 
+.desktop-hide {
+    display: none;
+    @media(max-width: 991px) {
+        display: block;
+    }
+}
+
 .input-group {
     position: relative;
     margin-bottom: 20px;

@@ -141,10 +141,18 @@
       overflow: hidden;
       margin-right: 7px;
     }
+    &-body {
+      display: flex;
+    }
     &-title {
       width: 130px;
       overflow: hidden;
       margin-right: 10px;
+    }
+    &-counter {
+      &-wrapper {
+        display: flex;
+      }
     }
     &-price {
       min-width: 75px;
@@ -153,5 +161,27 @@
   }
   &.visible {
     transform: scale(1);
+  }
+  @media(max-width: 1201px) {
+    .orders {
+      .cart-item {
+        &-weight {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+  @media(max-width: 991px) {
+    &-item {
+      align-items: flex-start;
+      &-body {
+        flex-direction: column;
+      }
+      &-counter {
+        &-wrapper {
+          justify-content: space-between;
+        }
+      }
+    }
   }
 }
