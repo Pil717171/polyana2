@@ -400,6 +400,8 @@ document.addEventListener('DOMContentLoaded', () => {
   } else if (promoPage) {
     changeHeaderSize()
     cartVisible()
+    mobileMenuOpen()
+    notMainMobileHeader()
   } else if (jobPage) {
     changeHeaderSize()
     cartVisible()

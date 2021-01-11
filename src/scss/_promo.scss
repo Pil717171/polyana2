@@ -6,11 +6,11 @@
   &-title {
     margin-bottom: 45px;
     h2 {
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 48px;
-      line-height: 59px;
+      //font-family: Montserrat;
+      //font-style: normal;
+      //font-weight: 600;
+      //font-size: 48px;
+      //line-height: 59px;
       text-align: center;
     }
   }
@@ -31,6 +31,7 @@
       img {
         min-width: 100%;
         min-height: 100%;
+        object-fit: cover;
       }
     }
     &-img {
@@ -65,5 +66,43 @@
   }
   .tom-yel {
     top: -100px;
+  }
+  @media(max-width: 991px) {
+    padding-top: 25px;
+    &_title {
+      margin-bottom: 35px;
+    }
+    &-item {
+      height: 550px;
+      &-top {
+        height: 205px;
+      }
+    }
+    .private-bottom {
+      height: 175px;
+      img {
+        transform: scale(0.5);
+      }
+      .tom-yel {
+        top: 0px;
+        left: -21px;
+      }
+      .tom-yel-2 {
+        display: none;
+      }
+      .tom-red-2 {
+        display: none;
+      }
+      .tom-red-3 {
+        top: 0;
+        right: -25px;
+      }
+      .grass {
+        left: -50px;
+      }
+      .salad {
+        left: 7%;
+      }
+    }
   }
 }
