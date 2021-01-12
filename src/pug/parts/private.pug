@@ -1,7 +1,7 @@
 .private
     .container
         .row
-            .col-8.offset-2
+            .col-12.col-lg-8.offset-lg-2
                 .private-title
                     h2 Личный кабинет
                 .private-block.name
@@ -56,20 +56,24 @@
                     .private-block-dynamic
                         form(name="private-change")
                             .private-input-address
-                                .private-input-address-top 
+                                .private-input-address-top
                                     .input-group
-                                        input#private-address-title.input-area(type='text' required='true')
+                                        select#private-address-title.input-area(type='text' required='true')
+                                            option(value="Домой") Домой
+                                            option(value="Работа") Работа
                                         label.label(for='private-address-title') Название
                                 .private-input-address-bottom
-                                    .input-group
-                                        input#private-address-street.input-area(type='text' required='true')
-                                        label.label(for='private-address-street') Улица
-                                    .input-group
-                                        input#private-address-build.input-area(type='text' required='true')
-                                        label.label(for='private-address-build') Дом
-                                    .input-group
-                                        input#private-address-app.input-area(type='text' required='true')
-                                        label.label(for='private-address-app') Квартира
+                                    .private-input-address-bottom-street
+                                        .input-group
+                                            input#private-address-street.input-area(type='text' required='true')
+                                            label.label(for='private-address-street') Улица
+                                    .private-input-address-bottom-app
+                                        .input-group
+                                            input#private-address-app.input-area(type='text' required='true')
+                                            label.label(for='private-address-app') Квартира
+                                        .input-group
+                                            input#private-address-build.input-area(type='text' required='true')
+                                            label.label(for='private-address-build') Дом
                             .button
                                 button.my-button(type="submit") Сохранить
                 .private-block.password

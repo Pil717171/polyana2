@@ -95,7 +95,7 @@
     }
     &.password {
       .input-group {
-        width: 300px;
+        max-width: 300px;
       }
       .button {
         max-height: 0;
@@ -137,12 +137,26 @@
       &-bottom {
         display: flex;
         justify-content: space-between;
-        & .input-group {
-          width: auto;
-          margin-left: 40px;
-          &:first-child {
-            min-width: 300px;
-            margin-left: 0;
+        //& .input-group {
+        //  width: auto;
+        //  margin-left: 40px;
+        //  &:first-child {
+        //    min-width: 300px;
+        //    margin-left: 0;
+        //  }
+        //}
+        &-street {
+          min-width: 300px;
+          margin-right: 20px;
+        }
+        &-app {
+          display: flex;
+          flex-direction: row;
+          .input-group {
+            max-width: 140px;
+            &:first-child {
+              margin-right: 20px;
+            }
           }
         }
       }
@@ -203,12 +217,25 @@
       margin-top: 40px;
     }
   }
+  @media(max-width: 1200px) {
+    &-input {
+      &-address {
+        &-bottom {
+          flex-direction: column;
+          &-app {
+          }
+        }
+      }
+    }
+  }
+
   @media(max-width: 991px) {
+    padding-top: 25px;
     &-title {
       margin-bottom: 40px;
     }
     &-block {
-      padding: 30px 20px 5px;
+      padding: 30px 20px 30px;
       &-title {
         margin-bottom: 15px;
         h3 {
@@ -216,6 +243,82 @@
           line-height: 20px;
           text-align: center;
         }
+      }
+      &-dynamic {
+        .input-group {
+          width: 100%;
+        }
+      }
+      &-choice {
+        margin-bottom: 25px;
+        &-title {
+          p {
+            font-size: 14px;
+            line-height: 17px;
+          }
+        }
+        &-text {
+          p {
+            font-size: 14px;
+            line-height: 17px;
+          }
+        }
+      }
+      &-static {
+        &-item {
+          flex-direction: column;
+          margin-bottom: 10px;
+        }
+        &-title {
+          width: 100%;
+          margin-right: 0;
+        }
+        .input-group {
+          width: 100%;
+        }
+      }
+      button {
+        margin: 0 auto;
+        margin-top: 5px;
+      }
+    }
+    &-input {
+      &-address {
+        &-bottom {
+          &-street {
+            min-width: auto;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    &-bottom {
+      overflow: hidden;
+      display: block;
+      height: 175px;
+      img {
+        transform: scale(0.5);
+      }
+      .tom-yel {
+        top: 0px;
+        left: -21px;
+      }
+      .tom-yel-2 {
+        display: none;
+      }
+      .tom-red-2 {
+        display: none;
+      }
+      .tom-red-3 {
+        top: 0;
+        right: -25px;
+      }
+      .grass {
+        left: -50px;
+      }
+      .salad {
+        left: 7%;
+        bottom: -115px;
       }
     }
   }

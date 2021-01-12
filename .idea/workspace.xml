@@ -27,13 +27,20 @@
     <list default="true" id="76d95675-66e0-4cad-a0db-e4e22b36c356" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/mixins.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/mixins.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/order.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/order.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/parts/header-fixed.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/header-fixed.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/parts/header-mobile.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/header-mobile.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/parts/header-top.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/header-top.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/parts/menu-mobile.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/menu-mobile.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pug/parts/orders.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/orders.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/parts/private.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/private.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/private.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/private.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/_cart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_cart.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_header-mobile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_header-mobile.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_header.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/_orders.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_orders.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/_private.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_private.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_promo.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_promo.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +110,8 @@
       <workItem from="1609833187320" duration="10568000" />
       <workItem from="1609849398414" duration="12121000" />
       <workItem from="1609920886689" duration="16860000" />
-      <workItem from="1610350797639" duration="16389000" />
+      <workItem from="1610350797639" duration="16618000" />
+      <workItem from="1610437231719" duration="20998000" />
     </task>
     <task id="LOCAL-00001" summary="added map, dishes block">
       <created>1606750815815</created>
@@ -168,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610363245518</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="order page mobile version was add">
+      <created>1610380814351</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1610380814351</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,7 +209,8 @@
     <MESSAGE value="mobile version added" />
     <MESSAGE value="job page mobile version was add" />
     <MESSAGE value="promo page mobile version was add" />
-    <option name="LAST_COMMIT_MESSAGE" value="promo page mobile version was add" />
+    <MESSAGE value="order page mobile version was add" />
+    <option name="LAST_COMMIT_MESSAGE" value="order page mobile version was add" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1203" y="190" key="#SCSS" timestamp="1609759363093">
@@ -205,10 +221,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607266268066" />
-    <state x="-1335" y="4" key="CommitChangelistDialog2" timestamp="1610363245173">
+    <state x="-1335" y="4" key="CommitChangelistDialog2" timestamp="1610380813953">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1335" y="4" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610363245173" />
+    <state x="-1335" y="4" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610380813953" />
     <state x="585" y="4" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608055071358" />
     <state x="2505" y="88" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606750815427" />
     <state x="-1180" y="274" key="FileChooserDialogImpl" timestamp="1609948129701">
@@ -230,20 +246,20 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607005173741" />
-    <state x="-1368" y="252" key="Vcs.Push.Dialog.v2" timestamp="1610363250786">
+    <state x="-1368" y="252" key="Vcs.Push.Dialog.v2" timestamp="1610380817987">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610363250786" />
+    <state x="-1368" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610380817987" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608055076801" />
     <state x="2472" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606750821709" />
     <state x="777" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606721547724">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="777" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606721547724" />
-    <state x="-1252" y="239" width="583" height="562" key="find.popup" timestamp="1610354072122">
+    <state x="-1252" y="239" width="583" height="562" key="find.popup" timestamp="1610455407535">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1252" y="239" width="583" height="562" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610354072122" />
+    <state x="-1252" y="239" width="583" height="562" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610455407535" />
     <state x="668" y="239" width="583" height="562" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607262419650" />
     <state x="-1304" y="240" key="run.anything.popup" timestamp="1609766067950">
       <screen x="-1920" y="0" width="1920" height="1040" />

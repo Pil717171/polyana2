@@ -60,6 +60,9 @@
             border-bottom: 1px solid rgba(81, 82, 87, 0.1);
         }
     }
+    .private-bottom {
+        display: none;
+    }
     @media(max-width: 1200px) {
         .cart {
             &-item {
@@ -125,6 +128,9 @@
                     line-height: 20px;
                 }
             }
+            &-total {
+                padding-bottom: 0;
+            }
             &-tips {
                 width: auto;
                 margin: 0 auto;
@@ -153,6 +159,53 @@
                 &-block {
                     width: 40%;
                     margin: 15px;
+                }
+            }
+        }
+        .my-button {
+            margin: 0 auto;
+        }
+    }
+    @media(max-width: 768px) {
+        padding-bottom: 0;
+        .private {
+            &-input {
+                &-address {
+                    &-top {
+
+                    }
+                    &-bottom {
+
+                    }
+                }
+            }
+            &-bottom {
+                overflow: hidden;
+                display: block;
+                height: 175px;
+                img {
+                    transform: scale(0.5);
+                }
+                .tom-yel {
+                    top: 0px;
+                    left: -21px;
+                }
+                .tom-yel-2 {
+                    display: none;
+                }
+                .tom-red-2 {
+                    display: none;
+                }
+                .tom-red-3 {
+                    top: 0;
+                    right: -25px;
+                }
+                .grass {
+                    left: -50px;
+                }
+                .salad {
+                    left: 7%;
+                    bottom: -115px;
                 }
             }
         }
@@ -187,6 +240,11 @@
             font-weight: 600;
         }
     }
+    @media(max-width: 1200px) {
+        &-block {
+            width: 20%;
+        }
+    }
     @media(max-width: 991px) {
         &-block {
             margin: 0 10px;
@@ -201,7 +259,6 @@
                 font-size: 12px;
                 line-height: 15px;
             }
-
         }
     }
 }

@@ -160,22 +160,29 @@
   }
   //cart
   function cartVisible () {
-    let openButtons = Array.prototype.slice.call(document.querySelectorAll('.header-fixed-cart'))
-    let cart = document.querySelector('.cart')
+    let openButtons = Array.prototype.slice.call(document.querySelectorAll('.header-fixed-cart-button'))
+    let carts = document.querySelectorAll('.cart')
     let authBlock = document.querySelector('.auth')
-    let cartCloseButton = document.querySelector('.cart-close')
+    let cartCloseButtons = document.querySelectorAll('.cart-close')
     openButtons.forEach((button) => {
       button.addEventListener('click', (e) => {
         e.stopPropagation()
         authBlock.classList.remove('visible')
-        cart.classList.toggle('visible')
+        carts.forEach((cart) => {
+          cart.classList.toggle('visible')
+        })
       })
     })
-    cartCloseButton.addEventListener('click', (e) => {
-      e.stopPropagation()
-      cart.classList.remove('visible')
+    cartCloseButtons.forEach((cartCloseButton) => {
+      cartCloseButton.addEventListener('click', (e) => {
+        e.stopPropagation()
+        carts.forEach((cart) => {
+          cart.classList.remove('visible')
+        })
+      })
     })
   }
+
   function setProduct () {
     let productsArray = Array.prototype.slice.call(document.querySelectorAll('.dishes-card'))
     productsArray.forEach((product) => {
@@ -186,6 +193,17 @@
     })
 
 
+  }
+
+  function mobileCartOpen () {
+    let mobileCartButton = document.querySelector('.menu-mobile-cart')
+    let carts = document.querySelectorAll('.cart')
+    mobileCartButton.addEventListener('click', (e) => {
+      e.stopPropagation()
+      carts.forEach((cart) => {
+        cart.classList.toggle('mobile-visible')
+      })
+    })
   }
   function addToCart (product) {
     let cart = []
@@ -393,6 +411,8 @@ document.addEventListener('DOMContentLoaded', () => {
     changePrivateData('.name')
     changePrivateData('.address')
     changeButtonShowing ()
+    mobileMenuOpen()
+    notMainMobileHeader()
   } else if(orderPage) {
     changeHeaderSize(true)
     changePrivateData('.name')
@@ -421,6 +441,7 @@ document.addEventListener('DOMContentLoaded', () => {
     authVisible()
     loginRegistrationChanging()
     mobileMenuOpen()
+    mobileCartOpen()
     window.addEventListener('scroll', headerMobileChanged )
   }
 })

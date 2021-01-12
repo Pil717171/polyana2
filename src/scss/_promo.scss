@@ -74,6 +74,10 @@
     }
     &-item {
       height: 550px;
+      &-title {
+        font-size: 16px;
+        line-height: 20px;
+      }
       &-top {
         height: 205px;
       }

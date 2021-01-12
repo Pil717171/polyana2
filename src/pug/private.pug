@@ -10,8 +10,9 @@ html(lang="en")
 
     body
         .header
+            include ./parts/header-mobile
             include ./parts/header-top.pug
-        include ./parts/private.pug
+            include ./parts/private.pug
         .footer
             include ./parts/footer-bottom.pug
         script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js' integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj' crossorigin='anonymous')
