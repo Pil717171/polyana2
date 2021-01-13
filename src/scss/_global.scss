@@ -18,6 +18,12 @@ body {
     }
     &-hidden {
         overflow: hidden;
+        &-modal {
+            overflow: hidden;
+            .menu-mobile-background {
+                display: block;
+            }
+        }
     }
 }
 

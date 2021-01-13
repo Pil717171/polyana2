@@ -22,15 +22,19 @@
                         .menu-mobile-item
                             p Завтраки
 .menu-mobile-bottom
+    .menu-mobile-background
     .menu-mobile-sign
         .menu-mobile-sign-img
             img(src='./images/header/login.svg')
         .menu-mobile-sign-text
             span Войти
+    include ./auth.pug
     .menu-mobile-cart
         .menu-mobile-cart-img
             img(src='./images/header/cart.svg')
         .menu-mobile-cart-text
             span Корзина &nbsp;
             span.bold 0 p.
+        .menu-mobile-cart-text-open
+            span Оформить заказ
     include ./cart.pug

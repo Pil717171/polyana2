@@ -178,6 +178,7 @@
         e.stopPropagation()
         carts.forEach((cart) => {
           cart.classList.remove('visible')
+          cart.classList.remove('mobile-visible')
         })
       })
     })
@@ -198,13 +199,37 @@
   function mobileCartOpen () {
     let mobileCartButton = document.querySelector('.menu-mobile-cart')
     let carts = document.querySelectorAll('.cart')
+    let cartCloseButtons = document.querySelectorAll('.cart-close')
+    let authBlocks = document.querySelectorAll('.auth')
+    let body = document.body
+
     mobileCartButton.addEventListener('click', (e) => {
       e.stopPropagation()
+      authBlocks.forEach((auth) => {
+        auth.classList.remove('mobile-visible')
+      })
       carts.forEach((cart) => {
         cart.classList.toggle('mobile-visible')
       })
+      mobileCartButton.classList.toggle('order-active')
+
+      let cartActiveBlock = document.querySelector('.cart.mobile-visible')
+
+      if(cartActiveBlock !== null) {
+        body.classList.add('body-hidden-modal')
+      } else {
+        body.classList.remove('body-hidden-modal')
+      }
+    })
+    cartCloseButtons.forEach((closeButton) => {
+      closeButton.addEventListener('click', (e) => {
+        e.stopPropagation()
+        mobileCartButton.classList.remove('order-active')
+        body.classList.remove('body-hidden-modal')
+      })
     })
   }
+
   function addToCart (product) {
     let cart = []
     if(localStorage.getItem('cart') !== null) {
@@ -226,7 +251,6 @@
   }
   // Phone mask
   function addMask (selector) {
-  console.log(selector)
   $(selector).mask("+375 (99) 999-99-99")
 }
   // auth block
@@ -246,39 +270,103 @@
     })
   }
 
+  function authMobileVisible () {
+    let openButton = document.querySelector('.menu-mobile-sign')
+    let authBlocks = document.querySelectorAll('.auth')
+    let cartBlocks = document.querySelectorAll('.cart')
+    let closeButtons = document.querySelectorAll('.auth-close')
+    let mobileCartButton = document.querySelector('.menu-mobile-cart')
+    let body = document.body
+
+    openButton.addEventListener('click', (e) => {
+      e.stopPropagation()
+      cartBlocks.forEach((cart) => {
+        cart.classList.remove('mobile-visible')
+        mobileCartButton.classList.remove('order-active')
+      })
+      authBlocks.forEach((auth) => {
+        auth.classList.toggle('mobile-visible')
+      })
+      let authActiveBlock = document.querySelector('.auth.mobile-visible')
+
+      if(authActiveBlock !== null) {
+        body.classList.add('body-hidden-modal')
+      } else {
+        body.classList.remove('body-hidden-modal')
+      }
+    })
+    closeButtons.forEach((button) => {
+      button.addEventListener('click', (e) => {
+        e.stopPropagation()
+        authBlocks.forEach((auth) => {
+          auth.classList.remove('mobile-visible')
+        })
+        body.classList.remove('body-hidden-modal')
+      })
+    })
+  }
+
   function loginRegistrationChanging () {
-    let loginBlock = document.querySelector('.login')
-    let regBlock = document.querySelector('.reg')
-    let loginTrigger = document.querySelector('.reg-cancel')
-    let regTrigger = document.querySelector('.login-registration')
-    let nextStepButton = document.querySelector('.reg-next')
-    let prevStepButton = document.querySelector('.reg-back')
-    let firstStepBlock = document.querySelector('.reg-first')
-    let secondStepBlock = document.querySelector('.reg-second')
+    let loginBlocks = document.querySelectorAll('.login')
+    let regBlocks = document.querySelectorAll('.reg')
+    let loginTriggers = document.querySelectorAll('.reg-cancel')
+    let regTriggers = document.querySelectorAll('.login-registration')
+    let nextStepButtons = document.querySelectorAll('.reg-next')
+    let prevStepButtons = document.querySelectorAll('.reg-back')
+    let firstStepBlocks = document.querySelectorAll('.reg-first')
+    let secondStepBlocks = document.querySelectorAll('.reg-second')
 
-    loginTrigger.addEventListener('click', (e) => {
-      e.stopPropagation()
-      loginBlock.classList.add('active')
-      regBlock.classList.remove('active')
-
-    })
-    regTrigger.addEventListener('click', (e) => {
-      e.stopPropagation()
-      loginBlock.classList.remove('active')
-      regBlock.classList.add('active')
-      firstStepBlock.classList.add('active')
-    })
-    nextStepButton.addEventListener('click', (e) => {
-      e.stopPropagation()
-      firstStepBlock.classList.remove('active')
-      secondStepBlock.classList.add('active')
-    })
-    prevStepButton.addEventListener('click', (e) => {
-      e.stopPropagation()
-      firstStepBlock.classList.add('active')
-      secondStepBlock.classList.remove('active')
+    loginTriggers.forEach((loginTrigger) => {
+      loginTrigger.addEventListener('click', (e) => {
+        e.stopPropagation()
+        loginBlocks.forEach((loginBlock) => {
+          loginBlock.classList.add('active')
+        })
+        regBlocks.forEach((regBlock) => {
+          regBlock.classList.remove('active')
+        })
+      })
     })
 
+    regTriggers.forEach((regTrigger) => {
+      regTrigger.addEventListener('click', (e) => {
+        e.stopPropagation()
+        loginBlocks.forEach((loginBlock) => {
+          loginBlock.classList.remove('active')
+        })
+        regBlocks.forEach((regBlock) => {
+          regBlock.classList.add('active')
+        })
+        firstStepBlocks.forEach((firstStepBlock) => {
+          firstStepBlock.classList.add('active')
+        })
+
+      })
+    })
+
+    nextStepButtons.forEach((nextStepButton) => {
+      nextStepButton.addEventListener('click', (e) => {
+        e.stopPropagation()
+        firstStepBlocks.forEach((firstStepBlock) => {
+          firstStepBlock.classList.remove('active')
+        })
+        secondStepBlocks.forEach((secondStepBlock) => {
+          secondStepBlock.classList.add('active')
+        })
+      })
+    })
+
+    prevStepButtons.forEach((prevStepButton) => {
+      prevStepButton.addEventListener('click', (e) => {
+        e.stopPropagation()
+        firstStepBlocks.forEach((firstStepBlock) => {
+          firstStepBlock.classList.add('active')
+        })
+        secondStepBlocks.forEach((secondStepBlock) => {
+          secondStepBlock.classList.remove('active')
+        })
+      })
+    })
   }
 
   // changed Header (different size main and other pages)
@@ -439,6 +527,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cartVisible();
     addMask("#phone-reg")
     authVisible()
+    authMobileVisible()
     loginRegistrationChanging()
     mobileMenuOpen()
     mobileCartOpen()

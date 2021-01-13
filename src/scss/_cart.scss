@@ -11,7 +11,7 @@
   right: 15px;
   cursor: default;
   transition: 0.3s;
-  transform: scale(1);
+  transform: scale(0);
   &:before {
     content: '';
     display: block;
@@ -136,6 +136,13 @@
     border-bottom: 1px solid rgba(81, 82, 87, 0.1);
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
+    &-top {
+      display: flex;
+      align-items: center;
+    }
+    &-bottom {
+      display: flex;
+    }
     &-img {
       width: 70px;
       overflow: hidden;
@@ -159,13 +166,20 @@
       margin-left: 20px;
     }
   }
+  &-clear {
+    display: none;
+  }
   &.visible {
     transform: scale(1);
   }
   &.mobile-visible {
-    top: auto;
-    bottom: 55px;
-    width: 300px;
+    transform: scale(1);
+    &:before {
+      top: initial;
+      bottom: -10px;
+      //border-bottom: none;
+      //border-top: 10px solid #F4F1EC;
+    }
   }
   @media(max-width: 1201px) {
     .orders {
@@ -177,6 +191,13 @@
     }
   }
   @media(max-width: 991px) {
+    overflow-y: auto;
+    z-index: 5;
+    max-height: 80vh;
+    top: auto;
+    bottom: 55px;
+    right: 10px;
+    background: #F4F1EC;
     &-item {
       align-items: flex-start;
       &-body {
@@ -185,6 +206,75 @@
       &-counter {
         &-wrapper {
           justify-content: space-between;
+        }
+      }
+    }
+    &-button {
+      display: none;
+    }
+    &-clear {
+      text-align: right;
+      display: inline;
+      span {
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+    &-total {
+      padding-bottom: 15px;
+    }
+  }
+  @media(max-width: 568px) {
+    width: 300px;
+    padding: 20px;
+    &-item {
+      flex-direction: column;
+      position: relative;
+      &-top {
+        width: 100%;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+      }
+      &-bottom {
+        width: 100%;
+        justify-content: space-between;
+        padding-left: 77px;
+      }
+      &-img {
+        width: 70px;
+      }
+      &-title {
+        width: 170px;
+        margin-right: 0;
+        font-size: 16px;
+        line-height: 19px;
+        padding-right: 25px;
+        p {
+          text-align: left;
+        }
+      }
+      &-price {
+        min-width: auto;
+      }
+      &-close {
+        position: absolute;
+        top: 30px;
+        right: 0;
+      }
+    }
+    &-tips {
+      &-drink {
+        height: 46px;
+        padding-left: 8px;
+        & img {
+          width: 115px;
+        }
+      }
+      &-sause {
+        height: 46px;
+        padding-right: 10px;
+        & img {
+          width: 115px;
         }
       }
     }

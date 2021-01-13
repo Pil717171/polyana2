@@ -213,20 +213,22 @@ mixin sauseCard (id, weight, srcImg, title, desc, price, typeArray)
 
 mixin cartItem (id, imgSrc, title, count, price)
     .cart-item
-        .cart-item-img
-            img(src=imgSrc)
-        .cart-item-title
-            p=title
-        .cart-item-counter
-            .dishes-card-counter
-                .dishes-card-counter-minus
-                    span -
-                .dishes-card-counter-count
-                    span 1
-                .dishes-card-counter-plus
-                    span +
-        .cart-item-price
-            p=price
+        .cart-item-top
+            .cart-item-img
+                img(src=imgSrc)
+            .cart-item-title
+                p=title
+        .cart-item-bottom
+            .cart-item-counter
+                .dishes-card-counter
+                    .dishes-card-counter-minus
+                        span -
+                    .dishes-card-counter-count
+                        span 1
+                    .dishes-card-counter-plus
+                        span +
+            .cart-item-price
+                p=price
         .cart-item-close
             img(src='./../images/cart/item-close.svg')
 

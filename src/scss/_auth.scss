@@ -32,6 +32,20 @@
   &.visible {
     transform: scale(1);
   }
+  &.mobile-visible {
+    transform: scale(1);
+  }
+  @media(max-width: 991px) {
+    top: auto;
+    bottom: 60px;
+    left: 10px;
+    &:before {
+      display: none;
+    }
+  }
+  @media(max-width: 568px) {
+    width: 300px;
+  }
 }
 
 .login {
