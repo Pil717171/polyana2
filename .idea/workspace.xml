@@ -27,14 +27,10 @@
     <list default="true" id="76d95675-66e0-4cad-a0db-e4e22b36c356" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/mixins.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/mixins.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/parts/cart.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/cart.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/parts/header-top.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/header-top.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pug/parts/menu-mobile.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/menu-mobile.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/_auth.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_auth.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_cart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_cart.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_header-mobile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_header-mobile.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_menu-mobile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_menu-mobile.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +102,8 @@
       <workItem from="1609920886689" duration="16860000" />
       <workItem from="1610350797639" duration="16618000" />
       <workItem from="1610437231719" duration="21691000" />
-      <workItem from="1610523577138" duration="19218000" />
+      <workItem from="1610523577138" duration="19307000" />
+      <workItem from="1610610861901" duration="2665000" />
     </task>
     <task id="LOCAL-00001" summary="added map, dishes block">
       <created>1606750815815</created>
@@ -185,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610468548206</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="mobile popups was add">
+      <created>1610553401508</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1610553401508</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +217,8 @@
     <MESSAGE value="promo page mobile version was add" />
     <MESSAGE value="order page mobile version was add" />
     <MESSAGE value="mobile menu and other pages (mobile) was add" />
-    <option name="LAST_COMMIT_MESSAGE" value="mobile menu and other pages (mobile) was add" />
+    <MESSAGE value="mobile popups was add" />
+    <option name="LAST_COMMIT_MESSAGE" value="mobile popups was add" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1203" y="190" key="#SCSS" timestamp="1609759363093">
@@ -224,16 +229,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607266268066" />
-    <state x="-1335" y="4" key="CommitChangelistDialog2" timestamp="1610468547657">
+    <state x="-1335" y="4" key="CommitChangelistDialog2" timestamp="1610553401075">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1335" y="4" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610468547657" />
+    <state x="-1335" y="4" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610553401075" />
     <state x="585" y="4" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608055071358" />
     <state x="2505" y="88" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606750815427" />
-    <state x="-1828" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1610524985624">
+    <state x="-1828" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1610553472321">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1828" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610524985624" />
+    <state x="-1828" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610553472321" />
     <state x="-1180" y="274" key="FileChooserDialogImpl" timestamp="1609948129701">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -253,10 +258,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607005173741" />
-    <state x="-1368" y="252" key="Vcs.Push.Dialog.v2" timestamp="1610468556726">
+    <state x="-1368" y="252" key="Vcs.Push.Dialog.v2" timestamp="1610553410363">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610468556726" />
+    <state x="-1368" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610553410363" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608055076801" />
     <state x="2472" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606750821709" />
     <state x="777" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606721547724">

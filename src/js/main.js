@@ -40,7 +40,6 @@
   function initMap () {
     var optionsObj = zoomCenterCalculated()
     mapboxgl.accessToken = 'pk.eyJ1IjoicGlsNzE3MTcxIiwiYSI6ImNrMHl6ZHRzZDA5NjIzbnBlbXFjNG1ieDAifQ.PlTvgO1WM00hT6-OMxJsWA';
-    console.log(optionsObj)
     var map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
@@ -491,6 +490,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let orderPage = document.querySelector('.orders')
   let promoPage = document.querySelector('.promo')
   let jobPage = document.querySelector('.job')
+  let mobileSize = 991
+  let isMobile = document.body.clientWidth <= mobileSize
 
   if(privatePage) {
     changeHeaderSize()
