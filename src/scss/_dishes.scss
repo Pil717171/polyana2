@@ -9,6 +9,9 @@
         &-anchor {
             position: absolute;
             top: -50px;
+            @media(max-width: 991px) {
+                top: -80px;
+            }
         }
     }
     &-title {
