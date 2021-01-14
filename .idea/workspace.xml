@@ -20,21 +20,17 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76d95675-66e0-4cad-a0db-e4e22b36c356" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/job.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/job.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/parts/header-top.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/header-top.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/parts/menu-mobile.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/menu-mobile.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/private.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/private.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/mixins.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/mixins.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/parts/dishes-block.pug" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pug/promo.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/promo.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_auth.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_auth.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_private.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_private.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_dishes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_dishes.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +115,7 @@
       <workItem from="1610350797639" duration="16618000" />
       <workItem from="1610437231719" duration="21691000" />
       <workItem from="1610523577138" duration="19307000" />
-      <workItem from="1610610861901" duration="7477000" />
+      <workItem from="1610610861901" duration="11433000" />
     </task>
     <task id="LOCAL-00001" summary="added map, dishes block">
       <created>1606750815815</created>
@@ -212,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610619092100</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fixed auth form">
+      <created>1610626290824</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1610626290824</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +226,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -253,10 +268,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607266268066" />
-    <state x="-1335" y="4" key="CommitChangelistDialog2" timestamp="1610619091609">
+    <state x="-1335" y="4" key="CommitChangelistDialog2" timestamp="1610626290391">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1335" y="4" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610619091609" />
+    <state x="-1335" y="4" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610626290391" />
     <state x="585" y="4" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608055071358" />
     <state x="2505" y="88" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606750815427" />
     <state x="-1828" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1610623981498">
@@ -282,10 +297,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607005173741" />
-    <state x="-1368" y="252" key="Vcs.Push.Dialog.v2" timestamp="1610619097558">
+    <state x="-1368" y="252" key="Vcs.Push.Dialog.v2" timestamp="1610629138695">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610619097558" />
+    <state x="-1368" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610629138695" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608055076801" />
     <state x="2472" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606750821709" />
     <state x="777" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606721547724">

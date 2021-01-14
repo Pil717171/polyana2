@@ -5,6 +5,11 @@
     overflow: hidden;
     &-block {
         padding-top: 70px;
+        position: relative;
+        &-anchor {
+            position: absolute;
+            top: -50px;
+        }
     }
     &-title {
         margin-bottom: 40px;
