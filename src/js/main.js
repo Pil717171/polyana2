@@ -166,7 +166,9 @@
     openButtons.forEach((button) => {
       button.addEventListener('click', (e) => {
         e.stopPropagation()
-        authBlock.classList.remove('visible')
+        if(authBlock) {
+          authBlock.classList.remove('visible')
+        }
         carts.forEach((cart) => {
           cart.classList.toggle('visible')
         })
@@ -205,7 +207,9 @@
     mobileCartButton.addEventListener('click', (e) => {
       e.stopPropagation()
       authBlocks.forEach((auth) => {
-        auth.classList.remove('mobile-visible')
+        if(auth) {
+          auth.classList.remove('mobile-visible')
+        }
       })
       carts.forEach((cart) => {
         cart.classList.toggle('mobile-visible')
@@ -485,13 +489,22 @@
     }
   }
 
+  function authBlockDelete (mobileSize) {
+    let isMobile = document.body.clientWidth <= mobileSize
+    let authMobileBlock = document.querySelector('.menu-mobile-cart .auth')
+    let authDesktopBlock = document.querySelector('.header-top .auth')
+    if(isMobile) {
+      authDesktopBlock.remove()
+    } else {
+      authMobileBlock.remove()
+    }
+  }
+
 document.addEventListener('DOMContentLoaded', () => {
   let privatePage = document.querySelector('.private')
   let orderPage = document.querySelector('.orders')
   let promoPage = document.querySelector('.promo')
   let jobPage = document.querySelector('.job')
-  let mobileSize = 991
-  let isMobile = document.body.clientWidth <= mobileSize
 
   if(privatePage) {
     changeHeaderSize()
@@ -502,6 +515,7 @@ document.addEventListener('DOMContentLoaded', () => {
     changeButtonShowing ()
     mobileMenuOpen()
     notMainMobileHeader()
+    mobileCartOpen()
   } else if(orderPage) {
     changeHeaderSize(true)
     changePrivateData('.name')
@@ -509,18 +523,27 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenuOpen()
     notMainMobileHeader()
   } else if (promoPage) {
+    authBlockDelete(991)
     changeHeaderSize()
     cartVisible()
     mobileMenuOpen()
     notMainMobileHeader()
+    authVisible()
+    authMobileVisible()
+    mobileCartOpen()
   } else if (jobPage) {
+    authBlockDelete(991)
     changeHeaderSize()
     cartVisible()
     jobSpoilers()
     mobileMenuOpen()
     notMainMobileHeader()
+    authVisible()
+    authMobileVisible()
+    mobileCartOpen()
   }
   else {
+    authBlockDelete(991)
     initSlider()
     fixedMenu()
     initMap()
