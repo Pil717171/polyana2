@@ -473,20 +473,63 @@
     headerMobile.classList.add('grey')
   }
 
-  function headerMobileChanged () {
+  function headerMobileChanged (e) {
     let headerMobile = document.querySelector('.header-mobile')
     let menuMobile = document.querySelector('.menu-mobile')
+    let dishesBlocks = document.querySelectorAll('.dishes-block')
+    let sizes = []
 
-    let headerBottom = headerMobile.getBoundingClientRect().bottom
-    let menuTop = menuMobile.getBoundingClientRect().top
+    dishesBlocks.forEach((block) => {
+      let size = {
+        id: block.querySelector('.dishes-block-anchor').getAttribute('id'),
+        blockTop: block.offsetTop,
+        blockBottom: block.offsetTop + block.clientHeight
+      }
+      sizes.push(size)
+    })
 
-    if(menuTop <= headerBottom) {
-      (headerMobile.classList.add('grey'),
-      menuMobile.classList.add('sticky'))
-    } else {
-      (headerMobile.classList.remove('grey'),
-      menuMobile.classList.remove('sticky'))
-    }
+    window.addEventListener('scroll', () => {
+      let headerBottom = headerMobile.getBoundingClientRect().bottom
+      let menuTop = menuMobile.getBoundingClientRect().top
+      let addHeight
+      if(document.body.clientWidth > 991) {
+        addHeight = window.innerHeight/2
+      } else {
+        addHeight = window.innerHeight/2 - 200
+      }
+
+      let scrollHeight = window.scrollY - addHeight
+
+      menuItemsActive(scrollHeight, sizes)
+
+      if(menuTop <= headerBottom) {
+        (headerMobile.classList.add('grey'),
+          menuMobile.classList.add('sticky'))
+      } else {
+        (headerMobile.classList.remove('grey'),
+          menuMobile.classList.remove('sticky'))
+      }
+    })
+
+  }
+
+  function menuItemsActive (scrollHeight, sizes) {
+    sizes.forEach((size) => {
+       if(scrollHeight > size.blockTop && scrollHeight < size.blockBottom) {
+         let activeItems = document.querySelectorAll(`.link-${size.id}`)
+         if(activeItems.length !== 0 && activeItems[0].classList.contains('active-link')) {
+           return false
+         }
+         let activeLinks = document.querySelectorAll('.active-link')
+         activeLinks.forEach((link) => {
+           link.classList.remove('active-link')
+         })
+         activeItems.forEach((item) => {
+           item.classList.add('active-link')
+         })
+       }
+    })
+
   }
 
   function authBlockDelete (mobileSize) {
@@ -498,6 +541,10 @@
     } else {
       authMobileBlock.remove()
     }
+  }
+
+  function menuMobileDelete () {
+    document.querySelector('.menu-mobile').remove()
   }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -516,6 +563,8 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenuOpen()
     notMainMobileHeader()
     mobileCartOpen()
+    menuMobileDelete()
+    authBlockDelete()
   } else if(orderPage) {
     changeHeaderSize(true)
     changePrivateData('.name')
@@ -555,7 +604,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loginRegistrationChanging()
     mobileMenuOpen()
     mobileCartOpen()
-    window.addEventListener('scroll', headerMobileChanged )
+    headerMobileChanged()
   }
 })
 

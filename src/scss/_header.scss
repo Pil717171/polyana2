@@ -333,4 +333,9 @@
       height: 185px;
     }
   }
+  .active-link {
+    a {
+      color: $activeColor;
+    }
+  }
 }

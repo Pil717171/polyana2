@@ -110,6 +110,9 @@
             }
         }
     }
+    .active-link {
+        color: $activeColor;
+    }
 
     @media(max-width: 991px) {
         display: block;

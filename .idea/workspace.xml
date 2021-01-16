@@ -27,7 +27,12 @@
   <component name="ChangeListManager">
     <list default="true" id="76d95675-66e0-4cad-a0db-e4e22b36c356" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_dishes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_dishes.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/parts/header-fixed.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/header-fixed.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/parts/header-mobile.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/header-mobile.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/parts/menu-mobile.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/menu-mobile.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_menu-mobile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_menu-mobile.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +118,9 @@
       <workItem from="1610437231719" duration="21691000" />
       <workItem from="1610523577138" duration="19307000" />
       <workItem from="1610610861901" duration="13442000" />
+      <workItem from="1610698142555" duration="5818000" />
+      <workItem from="1610782527517" duration="5226000" />
+      <workItem from="1610793445717" duration="13633000" />
     </task>
     <task id="LOCAL-00001" summary="added map, dishes block">
       <created>1606750815815</created>
@@ -283,10 +291,10 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1828" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610623981498" />
-    <state x="-1180" y="274" key="FileChooserDialogImpl" timestamp="1609948129701">
+    <state x="-1180" y="274" key="FileChooserDialogImpl" timestamp="1610791893458">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1180" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1609948129701" />
+    <state x="-1180" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610791893458" />
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608536649431" />
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608104371326" />
     <state x="2660" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606743213121" />
