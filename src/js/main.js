@@ -476,6 +476,8 @@
   function headerMobileChanged (e) {
     let headerMobile = document.querySelector('.header-mobile')
     let menuMobile = document.querySelector('.menu-mobile')
+    let menuMobileItems = document.querySelectorAll('.menu-mobile-item')
+    let fixedMenuItems = document.querySelectorAll('.header-fixed-menu-item')
     let dishesBlocks = document.querySelectorAll('.dishes-block')
     let sizes = []
 
@@ -488,21 +490,45 @@
       sizes.push(size)
     })
 
+    fixedMenuItems.forEach((block) => {
+      scrollFunction(block)
+    })
+
+    menuMobileItems.forEach((item) => {
+      scrollFunction(item)
+    })
+
+    function scrollFunction (item) {
+      item.addEventListener('click', (e) => {
+        let id = item.dataset.id
+        let idBlock = document.querySelector(`#${id}`)
+        let rect = idBlock.getBoundingClientRect()
+        let scrollTop
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        let top = rect.top + scrollTop
+        window.scrollTo({
+          top: top,
+          behavior: "smooth"
+        })
+      })
+    }
+
     window.addEventListener('scroll', () => {
       let headerBottom = headerMobile.getBoundingClientRect().bottom
       let menuTop = menuMobile && menuMobile.getBoundingClientRect().top
       let addHeight
-      if(!menuTop) {
-        return false
-      }
+
       if(document.body.clientWidth > 991) {
         addHeight = window.innerHeight/2 - 50
       } else {
-        addHeight = window.innerHeight/2 - 100
+        addHeight = window.innerHeight/2 - 300
       }
 
       let scrollHeight = window.scrollY - addHeight
       menuItemsActive(scrollHeight, sizes)
+      if(!menuTop) {
+        return false
+      }
       if(menuTop <= headerBottom) {
         (headerMobile.classList.add('grey'),
           menuMobile.classList.add('sticky'))
@@ -527,7 +553,7 @@
          activeItems.forEach((item) => {
            item.classList.add('active-link')
          })
-         menuMobileHorizontalScroll(activeItems)
+         menuMobileHorizontalScroll(activeItems, size)
        }
     })
   }

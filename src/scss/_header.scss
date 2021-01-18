@@ -253,6 +253,9 @@
         &.active {
           color: #5AACB8;
         }
+        &.active-link {
+          color: $activeColor;
+        }
       }
     }
     &-phone {
