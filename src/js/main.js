@@ -157,7 +157,7 @@
       })
     }
   }
-  //cart
+  // cart
   function cartVisible () {
     let openButtons = Array.prototype.slice.call(document.querySelectorAll('.header-fixed-cart-button'))
     let carts = document.querySelectorAll('.cart')
@@ -490,18 +490,19 @@
 
     window.addEventListener('scroll', () => {
       let headerBottom = headerMobile.getBoundingClientRect().bottom
-      let menuTop = menuMobile.getBoundingClientRect().top
+      let menuTop = menuMobile && menuMobile.getBoundingClientRect().top
       let addHeight
+      if(!menuTop) {
+        return false
+      }
       if(document.body.clientWidth > 991) {
-        addHeight = window.innerHeight/2
+        addHeight = window.innerHeight/2 - 50
       } else {
-        addHeight = window.innerHeight/2 - 200
+        addHeight = window.innerHeight/2 - 100
       }
 
       let scrollHeight = window.scrollY - addHeight
-
       menuItemsActive(scrollHeight, sizes)
-
       if(menuTop <= headerBottom) {
         (headerMobile.classList.add('grey'),
           menuMobile.classList.add('sticky'))
@@ -510,7 +511,6 @@
           menuMobile.classList.remove('sticky'))
       }
     })
-
   }
 
   function menuItemsActive (scrollHeight, sizes) {
@@ -527,9 +527,18 @@
          activeItems.forEach((item) => {
            item.classList.add('active-link')
          })
+         menuMobileHorizontalScroll(activeItems)
        }
     })
+  }
 
+  function menuMobileHorizontalScroll (activeItems) {
+    let menuBlock = document.querySelector('.menu-mobile-wrapper')
+    let activeItem = activeItems[1]
+    if(activeItem) {
+      let leftScroll = activeItem.getBoundingClientRect().left
+      menuBlock.scrollLeft = leftScroll - 15
+    }
   }
 
   function authBlockDelete (mobileSize) {
@@ -590,6 +599,7 @@ document.addEventListener('DOMContentLoaded', () => {
     authVisible()
     authMobileVisible()
     mobileCartOpen()
+    menuMobileDelete()
   }
   else {
     authBlockDelete(991)

@@ -28,10 +28,6 @@
     <list default="true" id="76d95675-66e0-4cad-a0db-e4e22b36c356" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/parts/header-fixed.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/header-fixed.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/parts/header-mobile.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/header-mobile.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/parts/menu-mobile.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/parts/menu-mobile.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_header.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/_menu-mobile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_menu-mobile.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +116,8 @@
       <workItem from="1610610861901" duration="13442000" />
       <workItem from="1610698142555" duration="5818000" />
       <workItem from="1610782527517" duration="5226000" />
-      <workItem from="1610793445717" duration="13633000" />
+      <workItem from="1610793445717" duration="18563000" />
+      <workItem from="1610955902897" duration="2560000" />
     </task>
     <task id="LOCAL-00001" summary="added map, dishes block">
       <created>1606750815815</created>
@@ -227,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610630837898</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="changed menu-mobile blocks">
+      <created>1610809173574</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1610809173574</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +274,8 @@
     <MESSAGE value="mobile popups was add" />
     <MESSAGE value="fixed auth form" />
     <MESSAGE value="anchors added" />
-    <option name="LAST_COMMIT_MESSAGE" value="anchors added" />
+    <MESSAGE value="changed menu-mobile blocks" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed menu-mobile blocks" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1203" y="190" key="#SCSS" timestamp="1609759363093">
@@ -281,10 +286,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607266268066" />
-    <state x="-1335" y="4" key="CommitChangelistDialog2" timestamp="1610630837440">
+    <state x="-1335" y="4" key="CommitChangelistDialog2" timestamp="1610809173102">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1335" y="4" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610630837440" />
+    <state x="-1335" y="4" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610809173102" />
     <state x="585" y="4" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608055071358" />
     <state x="2505" y="88" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606750815427" />
     <state x="-1828" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1610623981498">
@@ -310,10 +315,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607005173741" />
-    <state x="-1368" y="252" key="Vcs.Push.Dialog.v2" timestamp="1610630844322">
+    <state x="-1368" y="252" key="Vcs.Push.Dialog.v2" timestamp="1610809178662">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610630844322" />
+    <state x="-1368" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610809178662" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608055076801" />
     <state x="2472" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1606750821709" />
     <state x="777" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606721547724">

@@ -18,11 +18,12 @@
     &-wrapper {
         display: flex;
         height: 50px;
-
+        transition: 0.3s;
         align-items: center;
         flex-wrap: nowrap;
         overflow-x: scroll;
         justify-content: space-between;
+        scroll-behavior: smooth;
         a {
             margin-right: 15px;
             &:last-child {
