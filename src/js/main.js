@@ -476,6 +476,7 @@
   function headerMobileChanged (e) {
     let headerMobile = document.querySelector('.header-mobile')
     let menuMobile = document.querySelector('.menu-mobile')
+    let menuItems = document.querySelectorAll('.menu-item')
     let menuMobileItems = document.querySelectorAll('.menu-mobile-item')
     let fixedMenuItems = document.querySelectorAll('.header-fixed-menu-item')
     let dishesBlocks = document.querySelectorAll('.dishes-block')
@@ -488,6 +489,10 @@
         blockBottom: block.offsetTop + block.clientHeight
       }
       sizes.push(size)
+    })
+
+    menuItems.forEach((item) => {
+      scrollFunction(item)
     })
 
     fixedMenuItems.forEach((block) => {
