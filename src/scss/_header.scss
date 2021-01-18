@@ -250,6 +250,7 @@
       position: relative;
       &-item {
         margin-right: 20px;
+        user-select: none;
         &.active {
           color: #5AACB8;
         }
