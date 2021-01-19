@@ -460,6 +460,7 @@
       headerMobile.classList.toggle('open')
       headerMobileMenu.classList.toggle('open')
       body.classList.toggle('body-hidden')
+      console.log(111111)
       if(headerMobileGrey && mainPage) {
         headerMobileGrey.classList.remove('grey')
       } else {
@@ -518,7 +519,7 @@
       })
     }
 
-    window.addEventListener('scroll', () => {
+    function greyHeaderChanging () {
       let headerBottom = headerMobile.getBoundingClientRect().bottom
       let menuTop = menuMobile && menuMobile.getBoundingClientRect().top
       let addHeight
@@ -541,6 +542,12 @@
         (headerMobile.classList.remove('grey'),
           menuMobile.classList.remove('sticky'))
       }
+    }
+
+    greyHeaderChanging()
+
+    window.addEventListener('scroll', () => {
+      greyHeaderChanging()
     })
   }
 
@@ -565,7 +572,7 @@
 
   function menuMobileHorizontalScroll (activeItems) {
     let menuBlock = document.querySelector('.menu-mobile-wrapper')
-    let activeItem = activeItems[1]
+    let activeItem = activeItems[2]
     if(activeItem) {
       let leftScroll = activeItem.getBoundingClientRect().left
       menuBlock.scrollLeft = leftScroll - 15
